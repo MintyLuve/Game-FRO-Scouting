@@ -6,4 +6,17 @@
     </style>
 
     <style name="Theme.GameFROScouting" parent="Base.Theme.GameFROScouting" />
+
+    <style name="box_text" parent="Widget.AppCompat.TextView">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">125dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:gravity">center_horizontal|top</item>
+        <item name="android:textColor">@color/textGrey</item>
+        <item name="fontFamily">@font/helvetica</item>
+        <item name="android:textSize">45dp</item>
+        <item name="android:lineHeight" tools:ignore="NewApi">65sp</item>
+    </style>
+
 </resources>

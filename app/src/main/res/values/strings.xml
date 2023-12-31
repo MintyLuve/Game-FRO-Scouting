@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Game FRO Scouting</string>
+    <string name="default_text">Empty\nBox</string>
 </resources>
