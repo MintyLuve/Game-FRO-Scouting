@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/lightBlue">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:weightSum="2"
-        android:paddingLeft="66dp"
-        android:paddingRight="66dp"
-        android:layout_height="wrap_content">
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="50dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,7 +26,7 @@
             android:text="@string/default_text"
             />
         <View
-            android:layout_width="76dp"
+            android:layout_width="30dp"
             android:layout_height="match_parent"/>
         <TextView
             android:layout_width="wrap_content"
@@ -36,6 +38,8 @@
             />
 
     </LinearLayout>
+
+
 
 
 
