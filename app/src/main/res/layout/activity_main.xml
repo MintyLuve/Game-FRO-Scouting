@@ -8,6 +8,18 @@
     android:orientation="vertical"
     android:background="@color/lightBlue">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/auto_text"
+        style="@style/header_text"/>
+    <ImageView
+        android:layout_width="267dp"
+        android:layout_height="5dp"
+        android:background="@drawable/dotted_line"
+        android:layout_gravity="center_horizontal"
+        />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -15,7 +27,7 @@
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:layout_height="124dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="25dp">
 
         <TextView
             android:layout_width="wrap_content"

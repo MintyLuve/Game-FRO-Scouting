@@ -19,4 +19,11 @@
         <item name="android:lineHeight" tools:ignore="NewApi">32sp</item>
     </style>
 
+    <style name="header_text" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">60sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="fontFamily">@font/helvetica_bold</item>
+        <item name="android:textColor">@color/textGrey</item>
+    </style>
+
 </resources>
