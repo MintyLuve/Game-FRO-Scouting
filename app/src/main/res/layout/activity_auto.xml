@@ -152,13 +152,9 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        app:itemRippleColor="@color/white"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/white"
         app:itemTextColor="@color/froBlue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu"/>
 
 </LinearLayout>
