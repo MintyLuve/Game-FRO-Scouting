@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Game FRO Scouting</string>
     <string name="default_text">Empty\nBox</string>
-    <string name="auto_text">Auto</string>
+    <string name="main_header">FRO Scouting\nGame</string>
+    <string name="game_text">Game</string>
+    <string name="auto_header">Auto</string>
 </resources>
