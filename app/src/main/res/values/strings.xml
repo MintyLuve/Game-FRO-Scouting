@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Game FRO Scouting</string>
+    <string name="content_desc">content desc</string>
     <string name="default_text">Empty\nBox</string>
-    <string name="main_header">FRO Scouting\nGame</string>
+    <string name="main_header">FRO Scouting</string>
     <string name="game_text">Game</string>
     <string name="auto_header">Auto</string>
+    <string name="temp_string">Next Page</string>
 </resources>
