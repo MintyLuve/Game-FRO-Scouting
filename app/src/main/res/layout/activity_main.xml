@@ -7,30 +7,42 @@
     android:orientation="vertical"
     android:background="@color/froBlue">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/main_header"
-        style="@style/header_text_light"/>
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="5dp"
-        android:background="@drawable/dotted_line_light"
-        android:contentDescription="@string/content_desc"
-        android:layout_gravity="center_horizontal"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/game_text"
-        style="@style/header_text_light"/>
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="5dp"
-        android:background="@drawable/dotted_line_light"
-        android:contentDescription="@string/content_desc"
-        android:layout_gravity="center_horizontal"
-        />
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/main_header"
+            style="@style/header_text_light"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="267dp"
+            android:layout_height="5dp"
+            android:background="@drawable/dotted_line_light"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/content_desc"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/game_text"
+            style="@style/header_text_light"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="5dp"
+            android:background="@drawable/dotted_line_light"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/content_desc"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
 
     <LinearLayout
         android:orientation="horizontal"
