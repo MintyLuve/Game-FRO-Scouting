@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/page_1"
-        android:title="Page 1"
-        android:icon="@drawable/ic_action_1" />
+        android:id="@+id/menu_button"
+        android:title="Menu Here"
+        android:icon="@drawable/menu_bars_button" />
     <item
-        android:id="@+id/page_2"
-        android:title="Page 2"
-        android:icon="@drawable/ic_action_2"/>
+        android:id="@+id/auto_button"
+        android:title="Auto"
+        android:icon="@drawable/menu_auto_button"/>
     <item
-        android:id="@+id/submit"
-        android:title="Submit"
-        android:icon="@drawable/ic_action_check"/>
+        android:id="@+id/teleop_button"
+        android:title="TeleOp"
+        android:icon="@drawable/menu_teleop_button"/>
+    <item
+        android:id="@+id/endgame_button"
+        android:title="End Game"
+        android:icon="@drawable/menu_endgame_button"/>
+    <item
+        android:id="@+id/notes_button"
+        android:title="Notes"
+        android:icon="@drawable/menu_notes_button"/>
+    <item
+        android:id="@+id/help_button"
+        android:title="Help"
+        android:icon="@drawable/menu_help_button"/>
 </menu>

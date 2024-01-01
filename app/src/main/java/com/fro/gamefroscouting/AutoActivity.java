@@ -17,18 +17,32 @@ public class AutoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_auto);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.page_2);
+        bottomNavigationView.setSelectedItemId(R.id.auto_button);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            if(item.getItemId() == R.id.page_1) {
+            if(item.getItemId() == R.id.menu_button) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                Toast.makeText(this, "Page 2 thing", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Menu button", Toast.LENGTH_SHORT).show();
                 finish();
             }
-            else if (item.getItemId() == R.id.submit) {
-                //startActivity(new Intent(getApplicationContext(), SubmitActivity.class));
-                Toast.makeText(this, "Submit thing", Toast.LENGTH_SHORT).show();
-
+            else if (item.getItemId() == R.id.teleop_button) {
+                //startActivity(new Intent(getApplicationContext(), TeleopActivity.class));
+                Toast.makeText(this, "Tele Op Button", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+            else if (item.getItemId() == R.id.endgame_button) {
+                //startActivity(new Intent(getApplicationContext(), EndgameActivity.class));
+                Toast.makeText(this, "Endgame Button", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+            else if (item.getItemId() == R.id.notes_button) {
+                //startActivity(new Intent(getApplicationContext(), NotesActivity.class));
+                Toast.makeText(this, "Notes Button", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+            else if (item.getItemId() == R.id.help_button) {
+                //startActivity(new Intent(getApplicationContext(), HelpActivity.class));
+                Toast.makeText(this, "Help Button", Toast.LENGTH_SHORT).show();
                 finish();
             }
             return false;
