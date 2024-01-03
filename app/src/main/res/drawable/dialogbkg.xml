@@ -8,6 +8,6 @@
         android:top="10dp"
         android:bottom="10dp"/>
     <stroke
-        android:width="20dp"
-        android:color="@color/froBlue"/>
+        android:width="10dp"
+        android:color="#102057"/>
 </shape>
