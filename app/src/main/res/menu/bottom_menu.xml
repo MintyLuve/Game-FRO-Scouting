@@ -14,9 +14,6 @@
         />
 
     <item
-        android:title=""/>
-
-    <item
         android:id="@+id/subscriptions"
         android:title="Subscriptions"
         android:icon="@drawable/baseline_subscriptions_24" />
@@ -24,5 +21,8 @@
         android:id="@+id/library"
         android:title="Library"
         android:icon="@drawable/baseline_video_library_24" />
+
+    <item
+        android:title=""/>
 
 </menu>
