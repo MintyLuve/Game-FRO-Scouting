@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubscriptionFragment">
+    tools:context=".AutoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Subscriptions"
+        android:text="Auto"
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/froBlue"/>

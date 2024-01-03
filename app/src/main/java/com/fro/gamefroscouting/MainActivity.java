@@ -38,36 +38,23 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         fab = findViewById(R.id.fab);
         drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        Toolbar toolbar = findViewById(R.id.toolbar);
 
-        setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        if (savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new HomeFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_home);
-
-        }
-
-        replaceFragment(new HomeFragment());
+        replaceFragment(new AutoFragment());
 
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
-            if (item.getItemId() == R.id.home) {
-                replaceFragment(new HomeFragment());
+            if (item.getItemId() == R.id.auto) {
+                replaceFragment(new AutoFragment());
             }
-            else if (item.getItemId() == R.id.shorts){
-                replaceFragment(new ShortsFragment());
+            else if (item.getItemId() == R.id.teleop){
+                replaceFragment(new TeleopFragment());
             }
-            else if (item.getItemId() == R.id.subscriptions){
-                replaceFragment(new SubscriptionFragment());
+            else if (item.getItemId() == R.id.endgame){
+                replaceFragment(new EndgameFragment());
             }
-            else if (item.getItemId() == R.id.library){
-                replaceFragment(new LibraryFragment());
+            else if (item.getItemId() == R.id.notes){
+                replaceFragment(new NotesFragment());
             }
             return true;
         });

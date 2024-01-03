@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/home"
-        android:title="Home"
+        android:id="@+id/auto"
+        android:title="Auto"
         android:icon="@drawable/baseline_home_24"/>
 
     <item
-        android:id="@+id/shorts"
-        android:title="Shorts"
+        android:id="@+id/teleop"
+        android:title="Tele Op"
         android:icon="@drawable/baseline_whatshot_24"
         />
 
     <item
-        android:id="@+id/subscriptions"
-        android:title="Subscriptions"
+        android:id="@+id/endgame"
+        android:title="End Game"
         android:icon="@drawable/baseline_subscriptions_24" />
     <item
-        android:id="@+id/library"
-        android:title="Library"
+        android:id="@+id/notes"
+        android:title="Notes"
         android:icon="@drawable/baseline_video_library_24" />
 
     <item
