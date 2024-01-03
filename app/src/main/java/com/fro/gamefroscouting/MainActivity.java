@@ -6,7 +6,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
-import toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -30,5 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle togger = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
+
     }
 }
