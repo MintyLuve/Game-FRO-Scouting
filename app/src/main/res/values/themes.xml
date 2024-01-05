@@ -4,9 +4,11 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/froBlue</item>
+        <item name="android:navigationBarColor">#04003E</item>
     </style>
 
     <style name="Theme.GameFROScouting" parent="Base.Theme.GameFROScouting" />
+
 
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_in</item>

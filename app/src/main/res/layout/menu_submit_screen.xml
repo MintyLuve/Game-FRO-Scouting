@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogbkg"
+    android:weightSum="2">
+
+    <FrameLayout
+        android:id="@+id/backToMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Menu"
+            android:textColor="@color/froBlue"
+            android:textSize="40sp"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/submitButtom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/froBlue">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Sumbit"
+            android:textColor="@color/white"
+            android:textSize="40sp"/>
+    </FrameLayout>
+
+</LinearLayout>

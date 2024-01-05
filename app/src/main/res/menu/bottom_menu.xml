@@ -5,22 +5,23 @@
     <item
         android:id="@+id/auto"
         android:title="Auto"
-        android:icon="@drawable/baseline_home_24"/>
+        android:icon="@drawable/menu_auto_button"/>
+
 
     <item
         android:id="@+id/teleop"
         android:title="Tele Op"
-        android:icon="@drawable/baseline_whatshot_24"
+        android:icon="@drawable/menu_teleop_button"
         />
 
     <item
         android:id="@+id/endgame"
         android:title="End Game"
-        android:icon="@drawable/baseline_subscriptions_24" />
+        android:icon="@drawable/menu_endgame_button" />
     <item
         android:id="@+id/notes"
         android:title="Notes"
-        android:icon="@drawable/baseline_video_library_24" />
+        android:icon="@drawable/menu_notes_button" />
 
     <item
         android:title=""/>
