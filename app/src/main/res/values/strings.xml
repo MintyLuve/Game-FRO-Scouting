@@ -5,5 +5,6 @@
     <string name="main_header">FRO Scouting</string>
     <string name="game_text">Game</string>
     <string name="auto_header">Auto</string>
+    <string name="teleop_header">Tele Op</string>
     <string name="temp_string">Next Page</string>
 </resources>
