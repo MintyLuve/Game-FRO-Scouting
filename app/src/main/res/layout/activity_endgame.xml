@@ -29,8 +29,8 @@
         android:background="@drawable/box_background"
         style="@style/large_box_text"
         android:text="@string/default_text"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="14dp"
         android:layout_weight="1"
         />
@@ -41,8 +41,8 @@
         android:background="@drawable/box_background"
         style="@style/large_box_text"
         android:text="@string/default_text"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="14dp"
         android:layout_weight="1"
         />

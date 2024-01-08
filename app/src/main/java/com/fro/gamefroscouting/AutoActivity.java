@@ -20,32 +20,28 @@ public class AutoActivity extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.auto_button);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            if(item.getItemId() == R.id.menu_button) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                Toast.makeText(this, "Menu button", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-            else if (item.getItemId() == R.id.teleop_button) {
-                //startActivity(new Intent(getApplicationContext(), TeleopActivity.class));
+            if (item.getItemId() == R.id.teleop_button) {
+                startActivity(new Intent(getApplicationContext(), TeleopActivity.class));
                 Toast.makeText(this, "Tele Op Button", Toast.LENGTH_SHORT).show();
                 finish();
             }
             else if (item.getItemId() == R.id.endgame_button) {
-                //startActivity(new Intent(getApplicationContext(), EndgameActivity.class));
+                startActivity(new Intent(getApplicationContext(), EndgameActivity.class));
                 Toast.makeText(this, "Endgame Button", Toast.LENGTH_SHORT).show();
                 finish();
             }
             else if (item.getItemId() == R.id.notes_button) {
-                //startActivity(new Intent(getApplicationContext(), NotesActivity.class));
+                startActivity(new Intent(getApplicationContext(), NotesActivity.class));
                 Toast.makeText(this, "Notes Button", Toast.LENGTH_SHORT).show();
                 finish();
             }
             else if (item.getItemId() == R.id.help_button) {
-                //startActivity(new Intent(getApplicationContext(), HelpActivity.class));
                 Toast.makeText(this, "Help Button", Toast.LENGTH_SHORT).show();
                 finish();
             }
             return false;
         });
+
+        bottomNavigationView.setItemIconTintList(null);
     }
 }

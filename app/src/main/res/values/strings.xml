@@ -2,6 +2,7 @@
     <string name="app_name">Game FRO Scouting</string>
     <string name="content_desc">content desc</string>
     <string name="default_text">Empty\nBox</string>
+    <string name="default_type">Type Here...</string>
     <string name="main_header">FRO Scouting</string>
     <string name="game_text">Game</string>
     <string name="auto_header">Auto</string>
