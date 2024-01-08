@@ -6,5 +6,7 @@
     <string name="game_text">Game</string>
     <string name="auto_header">Auto</string>
     <string name="teleop_header">Tele Op</string>
+    <string name="endgame_header">End Game</string>
+    <string name="notes_header">Notes</string>
     <string name="temp_string">Next Page</string>
 </resources>

@@ -13,7 +13,10 @@
         android:theme="@style/Theme.GameFROScouting"
         tools:targetApi="31">
         <activity
-            android:name=".TelepopActivity"
+            android:name=".TeleopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EndgameActivity"
             android:exported="false" />
         <activity
             android:name=".AutoActivity"
