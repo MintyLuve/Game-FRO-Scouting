@@ -10,4 +10,5 @@
     <color name="darkBlue">#445AA2</color>
     <color name="nightBlue">#001559</color>
     <color name="froBlue">#042698</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

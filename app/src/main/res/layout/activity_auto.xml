@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:background="@color/lightBlue"
-    android:weightSum="5">
+    android:weightSum="6">
 
 
     <TextView
@@ -149,12 +149,46 @@
             android:text="@string/default_text"/>
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:backgroundTint="@color/white"
-        app:itemTextColor="@color/froBlue"
-        app:menu="@menu/bottom_nav_menu"/>
+        android:layout_height="89dp"
+        android:background="@drawable/menu_bar"
+        android:layout_weight="1">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:contentDescription="@string/temp_string"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/menu_bar"
+            android:layout_gravity="center|start"
+            android:src="@drawable/menu_help_button"
+            style="@style/fab_menu_icon"
+            />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_height="80dp"
+            android:background="@drawable/nothing"
+            app:itemRippleColor="@color/white"
+            app:itemIconSize="55dp"
+            app:itemBackground="@drawable/nothing"
+            app:menu="@menu/bottom_nav_menu"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:contentDescription="@string/temp_string"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/menu_bar"
+            android:layout_gravity="center|end"
+            android:src="@drawable/menu_help_button"
+            style="@style/fab_menu_icon"
+            />
+    </FrameLayout>
+
+
 
 </LinearLayout>

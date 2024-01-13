@@ -37,10 +37,7 @@ public class TeleopActivity extends AppCompatActivity {
                 Toast.makeText(this, "Notes Button", Toast.LENGTH_SHORT).show();
                 finish();
             }
-            else if (item.getItemId() == R.id.help_button) {
-                Toast.makeText(this, "Help Button", Toast.LENGTH_SHORT).show();
-                finish();
-            }
+
             return false;
         });
 

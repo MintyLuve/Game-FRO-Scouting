@@ -17,8 +17,4 @@
         android:id="@+id/notes_button"
         android:title=""
         android:icon="@drawable/menu_notes_button"/>
-    <item
-        android:id="@+id/help_button"
-        android:title=""
-        android:icon="@drawable/menu_help_button"/>
 </menu>

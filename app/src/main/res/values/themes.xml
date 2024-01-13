@@ -68,4 +68,12 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="fab_menu_icon" parent="Widget.Design.FloatingActionButton">
+        <item name="maxImageSize">55dp</item>
+        <item name="borderWidth">0dp</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:outlineSpotShadowColor">@color/transparent</item>
+        <item name="android:outlineAmbientShadowColor">@color/transparent</item>
+    </style>
+
 </resources>
