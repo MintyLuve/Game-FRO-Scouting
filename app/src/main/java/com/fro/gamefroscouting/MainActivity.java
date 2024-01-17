@@ -12,52 +12,43 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button bShowSnackbar;
+    Button snackies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // register the button with appropriate ID
-        bShowSnackbar = findViewById(R.id.showSnackbarButton);
+        snackies = findViewById(R.id.showSnackbarButton);
 
-        bShowSnackbar.setOnClickListener(new View.OnClickListener() {
+        snackies.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // create an instance of the snackbar
+                // makes a snackbar with no text
                 final Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_LONG);
-
-                // inflate the custom_snackbar_view created previously
-                View customSnackView = getLayoutInflater().inflate(R.layout.my_snackbar, null);
-
-                // set the background of the default snackbar as transparent
+                // set the background to my snackbar
+                View mySnackbar = getLayoutInflater().inflate(R.layout.my_snackbar, null);
+                //makes background transparent so the custom view can be seen
                 snackbar.getView().setBackgroundColor(Color.TRANSPARENT);
-
-                // now change the layout of the snackbar
+                //changes snackbar layout
                 Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
-
-                // set padding of the all corners as 0
                 snackbarLayout.setPadding(0, 0, 0, 0);
 
-                // register the button from the custom_snackbar_view layout file
-                Button bGotoWebsite = customSnackView.findViewById(R.id.button);
-
-                // now handle the same button with onClickListener
-                bGotoWebsite.setOnClickListener(new View.OnClickListener() {
+                //Makes button do things
+                Button myButton = mySnackbar.findViewById(R.id.button);
+                myButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(), "Button pressed", Toast.LENGTH_SHORT).show();
-                        snackbar.dismiss();
+                        Toast.makeText(MainActivity.this, "Button pressed", Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 // add the custom snack bar layout to snackbar layout
-                snackbarLayout.addView(customSnackView, 0);
-
+                snackbarLayout.addView(mySnackbar, 0);
                 snackbar.show();
             }
         });
+
+
     }
 }
