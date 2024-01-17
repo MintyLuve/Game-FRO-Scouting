@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 final Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_LONG);
 
                 // inflate the custom_snackbar_view created previously
-                View customSnackView = getLayoutInflater().inflate(R.layout.custom_snackbar_view, null);
+                View customSnackView = getLayoutInflater().inflate(R.layout.my_snackbar, null);
 
                 // set the background of the default snackbar as transparent
                 snackbar.getView().setBackgroundColor(Color.TRANSPARENT);
@@ -42,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 snackbarLayout.setPadding(0, 0, 0, 0);
 
                 // register the button from the custom_snackbar_view layout file
-                Button bGotoWebsite = customSnackView.findViewById(R.id.gotoWebsiteButton);
+                Button bGotoWebsite = customSnackView.findViewById(R.id.button);
 
                 // now handle the same button with onClickListener
                 bGotoWebsite.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(), "Redirecting to Website", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Button pressed", Toast.LENGTH_SHORT).show();
                         snackbar.dismiss();
                     }
                 });
