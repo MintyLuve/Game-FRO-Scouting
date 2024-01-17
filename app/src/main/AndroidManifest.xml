@@ -13,6 +13,12 @@
         android:theme="@style/Theme.GameFROScouting"
         tools:targetApi="31">
         <activity
+            android:name=".FabActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ButtonActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
