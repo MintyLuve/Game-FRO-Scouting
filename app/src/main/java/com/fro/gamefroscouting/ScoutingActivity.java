@@ -1,6 +1,7 @@
 package com.fro.gamefroscouting;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -66,8 +67,8 @@ public class ScoutingActivity extends AppCompatActivity {
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // makes a snackbar with no text
-                final Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_LONG);
+                // makes a snackbar with no text (length is time)
+                final Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_INDEFINITE);
                 // set the background to my snackbar
                 View mySnackbar = getLayoutInflater().inflate(R.layout.help_snackbar, null);
                 //makes background transparent so the custom view can be seen
@@ -75,9 +76,10 @@ public class ScoutingActivity extends AppCompatActivity {
                 //changes snackbar layout
                 Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
                 snackbarLayout.setPadding(0, 0, 0, 0);
+                //sets the button to have an x
                 help.setBackgroundResource(R.drawable.menu_help_exit);
 
-
+                //when behind is clicked it dismisses the snackbar
                 View behind = mySnackbar.findViewById(R.id.behind);
                 behind.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -102,7 +104,7 @@ public class ScoutingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // makes a snackbar with no text
-                final Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_LONG);
+                final Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_INDEFINITE);
                 // set the background to my snackbar
                 View mySnackbar = getLayoutInflater().inflate(R.layout.menu_snackbar, null);
                 //makes background transparent so the custom view can be seen

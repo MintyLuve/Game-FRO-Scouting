@@ -9,5 +9,26 @@
     <string name="teleop_header">Tele Op</string>
     <string name="endgame_header">End Game</string>
     <string name="notes_header">Notes</string>
+    <string name="help_header_1">How To Scout</string>
+    <string name="help_header_2">Important Reminders:</string>
     <string name="temp_string">Next Page</string>
+
+    <string name="help_screen_bottom">
+\t \u25CF Engaged = The robot is on the charge station and it’s balanced. (The lights are on) \n
+\t \u25CF Docked = The robot is on the charge station but it isn’t balanced. (The lights are NOT on) \n
+\t \u25CF Parked = The robot is not on the charged station, but it’s in the community zone. \n
+\t \u25CF Single Pickup = The human player station where a game piece is dropped down a ramp. \n
+\t \u25CF Double Pickup = The human player station where the robot can pick up a game piece off of a ledge.
+    </string>
+
+    <string name="help_screen_top">
+\t 1. Check the match number and the position assigned to you on the scouting schedule. \n
+\t 2. Enter your name, the robot number, and the robot position. \n
+\t 3. Start in the Auto section. \n
+\t 4. Watch your assigned robot, filling out the fields associated with your robot’s actions. \n
+\t 5. When the first bell rings, go to the Tele-Op section. \n
+\t 6. Repeat step 4 \n
+\t 7. When the game is over, go to the Endgame section and fill out the boxes. \n
+\t 8. Go to the Notes section, and input any notes.
+    </string>
 </resources>

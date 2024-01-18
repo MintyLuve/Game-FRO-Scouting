@@ -50,6 +50,13 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="help_box_text" parent="Widget.AppCompat.TextView">
+        <item name="android:gravity">center_horizontal|left</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/textGrey</item>
+        <item name="autoSizeTextType">uniform</item>
+    </style>
+
     <style name="header_text_dark" parent="Widget.AppCompat.TextView">
         <item name="autoSizeTextType">uniform</item>
         <item name="android:gravity">center_horizontal</item>
@@ -64,12 +71,5 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="fab_menu_icon" parent="Widget.Design.FloatingActionButton">
-        <item name="maxImageSize">55dp</item>
-        <item name="borderWidth">0dp</item>
-        <item name="android:backgroundTint">@color/transparent</item>
-        <item name="android:outlineSpotShadowColor">@color/transparent</item>
-        <item name="android:outlineAmbientShadowColor">@color/transparent</item>
-    </style>
 
 </resources>

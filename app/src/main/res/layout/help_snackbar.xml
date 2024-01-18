@@ -9,44 +9,64 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:contentDescription="@string/temp_string"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/mySnackbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="90dp"
-        android:backgroundTint="@color/froBlue"
-        app:cardCornerRadius="30dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
+            android:id="@+id/mySnackbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="90dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/help_screen_background"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:orientation="vertical"
-            android:weightSum="3">
+            android:weightSum="4">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Help menu"
-                android:textColor="@color/white"
-                android:autoSizeTextType="uniform"
-                android:textAlignment="center"
-                android:layout_margin="10dp"
+                android:layout_height="30dp"
+                android:text="@string/help_header_1"
+                style="@style/header_text_dark"
+                android:layout_margin="5dp"
                 android:layout_weight="1"/>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:text="1 .sjdgfjhgjhg\n2. shdgfkjasghf\n3.sdjhgakfjsdh\n4.aksjhdgfhj\n5.djhfjh"
-                android:autoSizeTextType="uniform"
-                android:textColor="@color/white"
-                android:layout_margin="20dp"
+                android:layout_height="wrap_content"
+                android:text="@string/help_screen_top"
+                style="@style/help_box_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                />
+            <ImageView
+                android:layout_width="267dp"
+                android:layout_height="5dp"
+                android:background="@drawable/dotted_line_dark"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/content_desc" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/help_header_2"
+                style="@style/header_text_dark"
+                android:layout_margin="5dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/help_screen_bottom"
+                style="@style/help_box_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
                 />
         </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
