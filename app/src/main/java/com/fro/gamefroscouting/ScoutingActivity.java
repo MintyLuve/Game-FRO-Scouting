@@ -14,6 +14,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -71,9 +72,20 @@ public class ScoutingActivity extends AppCompatActivity {
                 //changes snackbar layout
                 Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
                 snackbarLayout.setPadding(0, 0, 0, 0);
+
+                View behind = mySnackbar.findViewById(R.id.behind);
+                behind.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snackbar.dismiss();
+                    }
+                });
+
                 // add the custom snack bar layout to snackbar layout
                 snackbarLayout.addView(mySnackbar, 0);
                 snackbar.show();
+
+
             }
         });
     }
