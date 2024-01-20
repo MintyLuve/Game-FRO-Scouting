@@ -33,36 +33,63 @@
         android:layout_weight="1"
         android:weightSum="3">
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/box_background"
-            style="@style/box_text"
-            android:text="@string/default_text"
-            />
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                style="@style/box_text"
+                android:text="@string/pickup_ground"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/groundSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
         <View
             android:layout_width="7dp"
             android:layout_height="match_parent"/>
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/box_background"
             android:layout_weight="1"
-            style="@style/box_text"
-            android:text="@string/default_text"
-            />
+            android:background="@drawable/box_background"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                style="@style/box_text"
+                android:text="@string/pickup_single"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/singleSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
         <View
             android:layout_width="7dp"
             android:layout_height="match_parent"/>
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/box_background"
             android:layout_weight="1"
-            style="@style/box_text"
-            android:text="@string/default_text"
-            />
+            android:background="@drawable/box_background"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                style="@style/box_text"
+                android:text="@string/pickup_double"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/doubleSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -81,20 +108,20 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             style="@style/long_box_text"
-            android:text="@string/default_text"/>
+            android:text="@string/cone_bot_row"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/mid_long_box_grey"
             android:layout_weight="1"
             style="@style/long_box_text"
-            android:text="@string/default_text"/>
+            android:text="@string/cone_mid_row"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             style="@style/long_box_text"
-            android:text="@string/default_text"/>
+            android:text="@string/cone_top_row"/>
     </LinearLayout>
 
     <LinearLayout
@@ -112,20 +139,20 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             style="@style/long_box_text"
-            android:text="@string/default_text"/>
+            android:text="@string/cube_bot_row"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/mid_long_box_white"
             android:layout_weight="1"
             style="@style/long_box_text"
-            android:text="@string/default_text"/>
+            android:text="@string/cube_mid_row"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             style="@style/long_box_text"
-            android:text="@string/default_text"/>
+            android:text="@string/cube_top_row"/>
     </LinearLayout>
 
     <LinearLayout
