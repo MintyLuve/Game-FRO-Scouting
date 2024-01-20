@@ -8,10 +8,9 @@
     <style name="Theme.GameFROScouting" parent="Base.Theme.GameFROScouting" />
 
     <style name="box_text" parent="Widget.AppCompat.TextView">
-        <item name="android:paddingBottom">60dp</item>
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingRight">10dp</item>
-        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingLeft">10dp</item>"
         <item name="android:gravity">center_horizontal|top</item>
         <item name="fontFamily">sans-serif</item>
         <item name="android:textColor">@color/textGrey</item>

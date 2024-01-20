@@ -21,6 +21,20 @@
 
     <!--Auto-->
     <string name="auto_header">Auto</string>
+    <string name="leave_comm">Leave\nCommunity</string>
+    <string-array name="end_pos">
+        <item>Parked</item>
+        <item>Docked</item>
+        <item>Engaged</item>
+        <item>None of The Above</item>
+    </string-array>
+    <string name="auto_end_pos">Auto\nEnd Position</string>
+    <string name="cone_bot_row">Cone\nBottom Row</string>
+    <string name="cone_mid_row">Cone\nMiddle Row</string>
+    <string name="cone_top_row">Cone\nTop Row</string>
+    <string name="cube_bot_row">Cube\nBottom Row</string>
+    <string name="cube_mid_row">Cube\nMiddle Row</string>
+    <string name="cube_top_row">Cube\nTop Row</string>
 
     <!--Tele Op-->
     <string name="teleop_header">Tele Op</string>
