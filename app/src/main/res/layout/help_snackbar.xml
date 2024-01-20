@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:clickable="true"
         android:focusable="true"
-        android:contentDescription="@string/temp_string"/>
+        android:contentDescription="@string/content_desc"/>
 
 
     <LinearLayout
@@ -33,6 +33,8 @@
             android:text="@string/help_header_1"
             style="@style/header_text_dark"
             android:layout_margin="5dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
             android:layout_weight="1"/>
         <TextView
             android:layout_width="match_parent"
@@ -56,6 +58,8 @@
             android:text="@string/help_header_2"
             style="@style/header_text_dark"
             android:layout_margin="5dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
             android:layout_weight="1"/>
         <TextView
             android:layout_width="match_parent"
