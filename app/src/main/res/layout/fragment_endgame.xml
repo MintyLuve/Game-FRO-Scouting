@@ -23,29 +23,58 @@
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/content_desc" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="213dp"
         android:background="@drawable/box_background"
-        style="@style/large_box_text"
-        android:text="@string/default_text"
+        android:layout_gravity="center_horizontal"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="14dp"
         android:layout_weight="1"
-        />
+        android:orientation="vertical"
+        android:weightSum="2">
 
-    <TextView
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/end_end_pos"
+            style="@style/large_box_text"
+            android:layout_weight="1"/>
+        <Spinner
+            android:id="@+id/posSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@drawable/dropdown_background"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="213dp"
         android:background="@drawable/box_background"
-        style="@style/large_box_text"
-        android:text="@string/default_text"
+        android:layout_gravity="center_horizontal"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="14dp"
         android:layout_weight="1"
-        />
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/default_text"
+            style="@style/large_box_text"
+            android:layout_weight="1"/>
+
+        <!--Replace view with future event-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="137dp"

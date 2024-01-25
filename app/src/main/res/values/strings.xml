@@ -20,7 +20,7 @@
     <string name="auto_end_pos">Auto\nEnd Position</string>
     <string name="cone_bot_row">Cone\nBottom Row</string>
     <string name="cone_mid_row">Cone\nMiddle Row</string>
-    <string name="cone_top_row">Cone\nTop Row</string>
+    <string name="cone_top_row">Cone\n Top Row </string>
     <string name="cube_bot_row">Cube\nBottom Row</string>
     <string name="cube_mid_row">Cube\nMiddle Row</string>
     <string name="cube_top_row">Cube\nTop Row</string>
@@ -33,10 +33,13 @@
 
     <!--Endgame-->
     <string name="endgame_header">End Game</string>
+    <string name="end_end_pos">End Game\nEnd Position</string>
 
     <!--Notes-->
     <string name="notes_header">Notes</string>
-
+    <string name="defends">Defended</string>
+    <string name="defended">Defended By</string>
+    <string name="robot">This Robot</string>
 
     <!--Submit Screen-->
     <string name="home_text">Home Page</string>

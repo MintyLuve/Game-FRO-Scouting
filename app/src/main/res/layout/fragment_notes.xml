@@ -33,25 +33,62 @@
         android:layout_weight="1"
         android:weightSum="2">
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:weightSum="4"
             android:background="@drawable/box_background"
-            style="@style/box_text"
-            android:text="@string/default_text"
-            />
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                style="@style/notes_box_text_top"
+                android:text="@string/defends"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                style="@style/notes_box_text_bottom"
+                android:text="@string/robot"
+                android:layout_weight="1"/>
+            <Spinner
+                android:id="@+id/defendsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@drawable/dropdown_background"
+                android:layout_margin="10dp"
+                android:layout_weight="2" />
+        </LinearLayout>
         <View
             android:layout_width="30dp"
             android:layout_height="match_parent"/>
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/box_background"
             android:layout_weight="1"
-            style="@style/box_text"
-            android:text="@string/default_text"
-            />
+            android:background="@drawable/box_background"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                style="@style/notes_box_text_top"
+                android:text="@string/defended"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                style="@style/notes_box_text_bottom"
+                android:text="@string/robot"
+                android:layout_weight="1"/>
+            <Spinner
+                android:id="@+id/defendedSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@drawable/dropdown_background"
+                android:layout_margin="10dp"
+                android:layout_weight="2" />
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -65,25 +102,66 @@
         android:background="@drawable/long_box_white"
         android:layout_weight="1"
         android:weightSum="3">
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/long_box_text"
-            android:text="@string/default_text"/>
-        <TextView
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                style="@style/long_box_text"
+                android:text="@string/default_text"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/mid_long_box_grey"
-            android:layout_weight="1"
-            style="@style/long_box_text"
-            android:text="@string/default_text"/>
-        <TextView
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                style="@style/long_box_text"
+                android:text="@string/default_text"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/long_box_text"
-            android:text="@string/default_text"/>
+            android:orientation="vertical"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                style="@style/long_box_text"
+                android:text="@string/default_text"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
     </LinearLayout>
 
     <EditText
