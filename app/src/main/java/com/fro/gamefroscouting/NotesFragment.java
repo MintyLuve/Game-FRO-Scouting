@@ -1,11 +1,13 @@
 package com.fro.gamefroscouting;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Spinner;
 
 import com.fro.gamefroscouting.R;
@@ -15,20 +17,18 @@ public class NotesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_notes, container, false);
 
-        Spinner defendsSpinner =  rootView.findViewById(R.id.defendsSpinner);
-        Spinner defendedSpinner =  rootView.findViewById(R.id.defendedSpinner);
+        AutoCompleteTextView defendsSpinner =  rootView.findViewById(R.id.defendsSpinner);
+        AutoCompleteTextView defendedSpinner =  rootView.findViewById(R.id.defendedSpinner);
 
-        // adds options to the defends spinner
-        ArrayAdapter<CharSequence> defendsAdapter = ArrayAdapter.createFromResource
-                (getActivity(), R.array.team_numbers, android.R.layout.simple_spinner_item);
-        defendsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        defendsSpinner.setAdapter(defendsAdapter);
+        String[] teamNums = getResources().getStringArray(R.array.team_numbers);
 
-        // adds options to the defended spinner
-        ArrayAdapter<CharSequence> defendedAdapter = ArrayAdapter.createFromResource
-                (getActivity(), R.array.team_numbers, android.R.layout.simple_spinner_item);
-        defendedAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        defendedSpinner.setAdapter(defendedAdapter);
+        //adds typable dropdown to spinners
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_dropdown_item_1line, teamNums);
+        defendsSpinner.setThreshold(1);
+        defendsSpinner.setAdapter(adapter);
+
+        defendedSpinner.setThreshold(1);
+        defendedSpinner.setAdapter(adapter);
 
         // Inflate the layout for this fragment
         return rootView;

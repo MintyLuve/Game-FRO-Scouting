@@ -3,11 +3,15 @@ package com.fro.gamefroscouting;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.button1);
-        Spinner teamSpinner = (Spinner) findViewById(R.id.teamSpinner);
+        AutoCompleteTextView teamType = (AutoCompleteTextView) findViewById(R.id.teamType);
         Spinner posSpinner = (Spinner) findViewById(R.id.posSpinner);
+
+        String[] teamNums = getResources().getStringArray(R.array.team_numbers);
 
         // changes to next page on click
         button.setOnClickListener(new View.OnClickListener() {
@@ -28,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // adds options to the team spinner
-        ArrayAdapter<CharSequence> teamAdapter = ArrayAdapter.createFromResource
-                (this, R.array.team_numbers, android.R.layout.simple_spinner_item);
-        teamAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        teamSpinner.setAdapter(teamAdapter);
+        //adds typable dropdown to team spinner
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>
+                (this, android.R.layout.simple_dropdown_item_1line, teamNums);
+        teamType.setThreshold(1);
+        teamType.setAdapter(adapter);
 
         // adds options to the position spinner
         ArrayAdapter<CharSequence> posAdapter = ArrayAdapter.createFromResource

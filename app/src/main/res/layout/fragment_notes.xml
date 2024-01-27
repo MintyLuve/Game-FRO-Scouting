@@ -52,13 +52,15 @@
                 style="@style/notes_box_text_bottom"
                 android:text="@string/robot"
                 android:layout_weight="1"/>
-            <Spinner
+            <AutoCompleteTextView
                 android:id="@+id/defendsSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
+                android:hint="@string/default_type"
                 android:background="@drawable/dropdown_background"
                 android:layout_margin="10dp"
-                android:layout_weight="2" />
+                android:layout_weight="2"
+                android:inputType="number" />
         </LinearLayout>
         <View
             android:layout_width="30dp"
@@ -81,13 +83,15 @@
                 style="@style/notes_box_text_bottom"
                 android:text="@string/robot"
                 android:layout_weight="1"/>
-            <Spinner
+            <AutoCompleteTextView
                 android:id="@+id/defendedSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
+                android:hint="@string/default_type"
                 android:background="@drawable/dropdown_background"
                 android:layout_margin="10dp"
-                android:layout_weight="2" />
+                android:layout_weight="2"
+                android:inputType="number" />
         </LinearLayout>
 
     </LinearLayout>

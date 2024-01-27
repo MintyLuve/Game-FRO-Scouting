@@ -8,7 +8,7 @@
     <!--Start Page-->
     <string name="main_header">FRO Scouting</string>
     <string name="game_text">Game</string>
-    <string name="name">Name:</string>
+    <string name="name">Scouter\'\s\nName:</string>
     <string name="team_num">Team\nNumber:</string>
     <string name="rob_pos">Robot\nPosition:</string>
     <string name="match_num">Match\nNumber:</string>
@@ -85,8 +85,22 @@
     <string-array name="team_numbers">
         <item>1</item>
         <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
         <item>6</item>
-        <item>more</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>101</item>
+        <item>2304</item>
+        <item>334</item>
+        <item>4092</item>
+        <item>5401</item>
+        <item>6999</item>
+        <item>78</item>
+        <item>826</item>
+        <item>9995</item>
 
     </string-array>
     
