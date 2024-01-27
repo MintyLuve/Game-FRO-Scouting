@@ -99,10 +99,39 @@
                 android:layout_weight="1"
                 style="@style/long_box_text"
                 android:text="@string/cone_bot_row"/>
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/co_bo_minus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/minus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/co_bo_num"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:autoSizeTextType="uniform"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"/>
+                <ImageButton
+                    android:id="@+id/co_bo_plus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/plus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
         </LinearLayout>
 
         <View
@@ -121,10 +150,39 @@
                 android:layout_weight="1"
                 style="@style/long_box_text"
                 android:text="@string/cone_mid_row"/>
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/co_mi_minus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/minus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/co_mi_num"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:autoSizeTextType="uniform"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"/>
+                <ImageButton
+                    android:id="@+id/co_mi_plus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/plus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -139,10 +197,39 @@
                 android:layout_weight="1"
                 style="@style/long_box_text"
                 android:text="@string/cone_top_row"/>
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/co_to_minus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/minus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/co_to_num"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:autoSizeTextType="uniform"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"/>
+                <ImageButton
+                    android:id="@+id/co_to_plus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/plus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -168,10 +255,39 @@
                 android:layout_weight="1"
                 style="@style/long_box_text"
                 android:text="@string/cube_bot_row"/>
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/cu_bo_minus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/minus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/cu_bo_num"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:autoSizeTextType="uniform"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"/>
+                <ImageButton
+                    android:id="@+id/cu_bo_plus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/plus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
         </LinearLayout>
 
         <View
@@ -190,10 +306,39 @@
                 android:layout_weight="1"
                 style="@style/long_box_text"
                 android:text="@string/cube_mid_row"/>
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/cu_mi_minus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/minus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/cu_mi_num"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:autoSizeTextType="uniform"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"/>
+                <ImageButton
+                    android:id="@+id/cu_mi_plus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/plus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -208,10 +353,39 @@
                 android:layout_weight="1"
                 style="@style/long_box_text"
                 android:text="@string/cube_top_row"/>
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/cu_to_minus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/minus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/cu_to_num"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:autoSizeTextType="uniform"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"/>
+                <ImageButton
+                    android:id="@+id/cu_to_plus"
+                    android:contentDescription="@string/content_desc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/plus_number_icon"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -241,7 +415,7 @@
                 android:text="@string/default_text"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="20dp"
                 android:layout_weight="1"/>
         </LinearLayout>
 
@@ -263,7 +437,7 @@
                 android:text="@string/default_text"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="20dp"
                 android:layout_weight="1"/>
         </LinearLayout>
 
@@ -281,7 +455,7 @@
                 android:text="@string/default_text"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="20dp"
                 android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
