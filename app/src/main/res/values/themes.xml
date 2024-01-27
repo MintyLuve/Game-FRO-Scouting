@@ -109,4 +109,19 @@
         <item name="autoSizeTextType">uniform</item>
     </style>
 
+    <style name="number_text" parent="Widget.AppCompat.TextView">
+        <item name="android:paddingBottom">5dp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/helvetica_bold</item>
+        <item name="android:textColor">@color/textGrey</item>
+    </style>
+
+    <style name="increment_buttons" parent="Widget.AppCompat.ImageButton">
+        <item name="contentDescription">@string/content_desc</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
 </resources>

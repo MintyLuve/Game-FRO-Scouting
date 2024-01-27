@@ -4,6 +4,7 @@
     <string name="content_desc">content desc</string>
     <string name="default_text">Empty\nBox</string>
     <string name="default_type">Type Here…</string>
+    <string name="default_number">0</string>
     
     <!--Start Page-->
     <string name="main_header">FRO Scouting</string>
