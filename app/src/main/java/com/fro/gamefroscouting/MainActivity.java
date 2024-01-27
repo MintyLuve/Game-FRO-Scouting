@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button plus;
-    Button minus;
+    ImageButton plus;
+    ImageButton minus;
     TextView textView;
     int textNum = 0;
     @Override
