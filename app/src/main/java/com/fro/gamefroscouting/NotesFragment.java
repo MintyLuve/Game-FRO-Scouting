@@ -53,7 +53,39 @@ public class NotesFragment extends Fragment {
         robot_break.setChecked(Values.notes_robo_break);
         robot_tip.setChecked(Values.notes_robo_tip);
         robot_penalties.setChecked(Values.notes_penalty);
+        /* dropdown
+        int defsSpinnerPosition = defsAdapter.getPosition(String.valueOf(Values.notes_defends));
+        defendsSpinner.setSelection(defsSpinnerPosition);
+        int defdSpinnerPosition = defdAdapter.getPosition(String.valueOf(Values.notes_defended));
+        defendedSpinner.setSelection(defdSpinnerPosition);
+        defendsSpinner.setText(String.valueOf(Values.notes_defends));
+        defendedSpinner.setText(String.valueOf(Values.notes_defended));
 
+        //when item is selected, it sets it's Value variable
+        defendsSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String returnValue = parent.getSelectedItem().toString();
+                Values.notes_defends = Integer.parseInt(returnValue);
+                Toast.makeText(getActivity(), "Selected Item: " + parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+                Values.notes_defends = Integer.parseInt(returnValue);
+            }
+        });
+        defendsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                String returnValue = parent.getItemAtPosition(pos).toString();
+                Values.notes_defends = Integer.parseInt(returnValue);
+            }
+            public void onNothingSelected(AdapterView<?> parent) {}});
+        //when item is selected, it sets it's Value variable
+        defendedSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                String returnValue = parent.getSelectedItem().toString();
+                Values.notes_defended = Integer.parseInt(returnValue);
+                Toast.makeText(getActivity(), "Selected Item: " + parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {}});
+*/
         //adding switch
         // robot break
         robot_break.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {@Override
