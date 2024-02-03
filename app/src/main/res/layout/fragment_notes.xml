@@ -117,11 +117,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 style="@style/long_box_text"
-                android:text="@string/default_text"/>
+                android:text="@string/robot_break"/>
             <com.google.android.material.materialswitch.MaterialSwitch
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="20dp"
                 android:layout_weight="1"/>
         </LinearLayout>
 
@@ -140,11 +140,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 style="@style/long_box_text"
-                android:text="@string/default_text"/>
+                android:text="@string/robot_tip"/>
             <com.google.android.material.materialswitch.MaterialSwitch
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="20dp"
                 android:layout_weight="1"/>
         </LinearLayout>
 
@@ -159,11 +159,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 style="@style/long_box_text"
-                android:text="@string/default_text"/>
+                android:text="@string/robot_penalties"/>
             <com.google.android.material.materialswitch.MaterialSwitch
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="20dp"
                 android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>

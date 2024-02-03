@@ -41,6 +41,9 @@
     <string name="defends">Defended</string>
     <string name="defended">Defended By</string>
     <string name="robot">This Robot</string>
+    <string name="robot_break">Did The\nRobot Break</string>
+    <string name="robot_tip">Was The\nRobot Tipped</string>
+    <string name="robot_penalties">Were There\nAny Penalties</string>
 
     <!--Submit Screen-->
     <string name="home_text">Home Page</string>

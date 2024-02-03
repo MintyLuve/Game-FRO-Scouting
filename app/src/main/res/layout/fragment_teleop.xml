@@ -123,13 +123,14 @@
                 android:weightSum="3"
                 android:gravity="center">
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/co_bo_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/minus_number_icon"
                     android:layout_marginStart="5dp"/>
                 <TextView
                     android:id="@+id/co_bo_num"
@@ -139,6 +140,7 @@
                     style="@style/number_text"
                     android:layout_weight="1"/>
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/co_bo_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -174,13 +176,14 @@
                 android:weightSum="3"
                 android:gravity="center">
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/co_mi_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/minus_number_icon"
                     android:layout_marginStart="5dp"/>
                 <TextView
                     android:id="@+id/co_mi_num"
@@ -190,6 +193,7 @@
                     style="@style/number_text"
                     android:layout_weight="1"/>
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/co_mi_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -221,13 +225,14 @@
                 android:weightSum="3"
                 android:gravity="center">
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/co_to_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/minus_number_icon"
                     android:layout_marginStart="5dp"/>
                 <TextView
                     android:id="@+id/co_to_num"
@@ -237,6 +242,7 @@
                     style="@style/number_text"
                     android:layout_weight="1"/>
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/co_to_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -279,13 +285,14 @@
                 android:weightSum="3"
                 android:gravity="center">
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/cu_bo_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/minus_number_icon"
                     android:layout_marginStart="5dp"/>
                 <TextView
                     android:id="@+id/cu_bo_num"
@@ -295,6 +302,7 @@
                     style="@style/number_text"
                     android:layout_weight="1"/>
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/cu_bo_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -330,13 +338,14 @@
                 android:weightSum="3"
                 android:gravity="center">
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/cu_mi_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/minus_number_icon"
                     android:layout_marginStart="5dp"/>
                 <TextView
                     android:id="@+id/cu_mi_num"
@@ -346,6 +355,7 @@
                     style="@style/number_text"
                     android:layout_weight="1"/>
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/cu_mi_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -377,13 +387,14 @@
                 android:weightSum="3"
                 android:gravity="center">
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/cu_to_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/minus_number_icon"
                     android:layout_marginStart="5dp"/>
                 <TextView
                     android:id="@+id/cu_to_num"
@@ -393,6 +404,7 @@
                     style="@style/number_text"
                     android:layout_weight="1"/>
                 <ImageButton
+                    android:contentDescription="@string/content_desc"
                     android:id="@+id/cu_to_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
