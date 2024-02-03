@@ -31,7 +31,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:src="@drawable/crescendo_logo"
+            android:src="@drawable/charged_up_logo"
             android:layout_weight="1"/>
         <ImageView
             android:layout_width="200dp"
