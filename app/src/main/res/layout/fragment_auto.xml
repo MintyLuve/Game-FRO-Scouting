@@ -44,7 +44,7 @@
                 android:layout_height="55dp"
                 style="@style/box_text"
                 android:text="@string/leave_comm"/>
-            <androidx.appcompat.widget.SwitchCompat
+            <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/leaveSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

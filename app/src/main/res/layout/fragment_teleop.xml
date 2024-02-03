@@ -44,7 +44,7 @@
                 android:layout_height="55dp"
                 style="@style/box_text"
                 android:text="@string/pickup_ground"/>
-            <androidx.appcompat.widget.SwitchCompat
+            <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/groundSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 android:layout_height="55dp"
                 style="@style/box_text"
                 android:text="@string/pickup_single"/>
-            <androidx.appcompat.widget.SwitchCompat
+            <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/singleSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                 android:layout_height="55dp"
                 style="@style/box_text"
                 android:text="@string/pickup_double"/>
-            <androidx.appcompat.widget.SwitchCompat
+            <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/doubleSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
