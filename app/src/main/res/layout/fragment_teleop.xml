@@ -261,6 +261,7 @@
         android:layout_marginTop="14dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginBottom="60dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/long_box_grey"
         android:layout_weight="1"
@@ -414,77 +415,6 @@
                     android:src="@drawable/plus_number_icon"
                     android:layout_marginEnd="5dp"/>
             </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    <!--Replace row with future event-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="122dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/long_box_white"
-        android:layout_weight="1"
-        android:weightSum="3">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:weightSum="2">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                style="@style/long_box_text"
-                android:text="@string/default_text"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/mid_long_box_grey"
-            android:orientation="vertical"
-            android:weightSum="2">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                style="@style/long_box_text"
-                android:text="@string/default_text"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:weightSum="2">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                style="@style/long_box_text"
-                android:text="@string/default_text"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
 

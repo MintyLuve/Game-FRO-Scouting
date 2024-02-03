@@ -32,6 +32,7 @@
         <item name="fontFamily">sans-serif</item>
         <item name="android:textColor">@color/textGrey</item>
         <item name="autoSizeTextType">uniform</item>
+        <item name="android:padding">10dp</item>
     </style>
 
     <style name="type_box_text" parent="Widget.AppCompat.TextView">
