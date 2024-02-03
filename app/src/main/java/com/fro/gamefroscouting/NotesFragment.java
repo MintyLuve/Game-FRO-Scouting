@@ -56,7 +56,7 @@ public class NotesFragment extends Fragment {
         defendedSpinner.setAdapter(defdAdapter);
 
         //Saving values when switching pages
-        //leave community switch
+        //switches
         robot_break.setChecked(Values.notes_robo_break);
         robot_tip.setChecked(Values.notes_robo_tip);
         robot_penalties.setChecked(Values.notes_penalty);

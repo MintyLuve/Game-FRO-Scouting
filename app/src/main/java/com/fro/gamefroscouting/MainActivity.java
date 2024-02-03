@@ -7,41 +7,45 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
 import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity {
-    ImageButton help;
-    Button button;
+    EditText scouterName;
+    EditText matchNum;
     AutoCompleteTextView teamType;
     Spinner posSpinner;
+    Button startButton;
+    ImageButton help;
 
+    String empty = "";
+
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = findViewById(R.id.button1);
+        startButton = findViewById(R.id.button1);
         teamType = findViewById(R.id.teamType);
         posSpinner = findViewById(R.id.posSpinner);
         help = findViewById(R.id.helpButton);
+        scouterName = findViewById(R.id.nameType);
+        matchNum = findViewById(R.id.matchType);
 
         String[] teamNums = getResources().getStringArray(R.array.team_numbers);
-
-        // changes to next page on click
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ScoutingActivity.class));
-            }
-        });
 
         //adds typable dropdown to team spinner
         ArrayAdapter<String> adapter=new ArrayAdapter<String>
@@ -54,6 +58,55 @@ public class MainActivity extends AppCompatActivity {
                 (this, R.array.positions, android.R.layout.simple_spinner_item);
         posAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         posSpinner.setAdapter(posAdapter);
+
+        //Saving values when switching pages
+        //type dropdown
+        teamType.setText(String.valueOf(Values.start_team_num));
+        // dropdown
+        int spinnerPosition = posAdapter.getPosition(Values.start_robo_pos);
+        posSpinner.setSelection(spinnerPosition);
+        //type boxes
+        scouterName.setText(Values.start_scout_name);
+        matchNum.setText(empty+ Values.start_match_num);
+
+        //when item is selected, it sets it's Value var
+        posSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                Values.start_robo_pos = parent.getItemAtPosition(pos).toString();}
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        //spinner return values
+        teamType.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
+                String returnValue = (String)parent.getItemAtPosition(position);
+                Values.start_team_num = Integer.parseInt(returnValue);
+            }
+        });
+
+        //adding type box return values
+        scouterName.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(Editable s) {Values.start_scout_name = scouterName.getText().toString();}
+        });
+        matchNum.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(Editable s) {
+                String stringVal = matchNum.getText().toString();
+                if (!stringVal.isEmpty()){Values.start_match_num = Integer.parseInt(stringVal);}
+                else {Values.start_match_num = 0;}
+            }
+        });
+
+        // changes to next page on click
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ScoutingActivity.class));
+            }
+        });
 
         // help snack bar
         help.setOnClickListener(new View.OnClickListener() {
