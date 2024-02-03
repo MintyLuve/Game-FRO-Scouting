@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -22,6 +23,20 @@ public class EndgameFragment extends Fragment {
                 (getActivity(), R.array.end_pos, android.R.layout.simple_spinner_item);
         posAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         posSpinner.setAdapter(posAdapter);
+
+        //Saving values when switching pages
+        // spinner
+        int spinnerPosition = posAdapter.getPosition(Values.eg_end_pos);
+        posSpinner.setSelection(spinnerPosition);
+
+        //when item is selected, it sets it's Value var
+        posSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                Values.eg_end_pos = parent.getItemAtPosition(pos).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
 
         // Inflate the layout for this fragment
         return rootView;

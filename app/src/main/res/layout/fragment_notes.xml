@@ -119,6 +119,7 @@
                 style="@style/long_box_text"
                 android:text="@string/robot_break"/>
             <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/breakSwitch"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -142,6 +143,7 @@
                 style="@style/long_box_text"
                 android:text="@string/robot_tip"/>
             <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/tipSwitch"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -161,6 +163,7 @@
                 style="@style/long_box_text"
                 android:text="@string/robot_penalties"/>
             <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/penaltiesSwitch"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
