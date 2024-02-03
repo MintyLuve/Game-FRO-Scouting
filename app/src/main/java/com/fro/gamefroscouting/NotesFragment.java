@@ -3,6 +3,9 @@ package com.fro.gamefroscouting;
 import android.content.res.Resources;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -21,10 +25,11 @@ public class NotesFragment extends Fragment {
     MaterialSwitch robot_break;
     MaterialSwitch robot_tip;
     MaterialSwitch robot_penalties;
-
     //Typable dropdown
     AutoCompleteTextView defendsSpinner;
     AutoCompleteTextView defendedSpinner;
+    //notes box
+    EditText typeBox;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,6 +42,8 @@ public class NotesFragment extends Fragment {
         robot_break = rootView.findViewById(R.id.breakSwitch);
         robot_tip = rootView.findViewById(R.id.tipSwitch);
         robot_penalties = rootView.findViewById(R.id.penaltiesSwitch);
+        // notes box
+        typeBox = rootView.findViewById(R.id.notesType);
 
         String[] teamNums = getResources().getStringArray(R.array.team_numbers);
 
@@ -53,40 +60,27 @@ public class NotesFragment extends Fragment {
         robot_break.setChecked(Values.notes_robo_break);
         robot_tip.setChecked(Values.notes_robo_tip);
         robot_penalties.setChecked(Values.notes_penalty);
-        /* dropdown
-        int defsSpinnerPosition = defsAdapter.getPosition(String.valueOf(Values.notes_defends));
-        defendsSpinner.setSelection(defsSpinnerPosition);
-        int defdSpinnerPosition = defdAdapter.getPosition(String.valueOf(Values.notes_defended));
-        defendedSpinner.setSelection(defdSpinnerPosition);
+        //dropdowns
         defendsSpinner.setText(String.valueOf(Values.notes_defends));
         defendedSpinner.setText(String.valueOf(Values.notes_defended));
+        //type box
+        typeBox.setText(Values.notes_type_box);
 
-        //when item is selected, it sets it's Value variable
+        //spinner return values
         defendsSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String returnValue = parent.getSelectedItem().toString();
-                Values.notes_defends = Integer.parseInt(returnValue);
-                Toast.makeText(getActivity(), "Selected Item: " + parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
+                String returnValue = (String)parent.getItemAtPosition(position);
                 Values.notes_defends = Integer.parseInt(returnValue);
             }
         });
-        defendsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                String returnValue = parent.getItemAtPosition(pos).toString();
-                Values.notes_defends = Integer.parseInt(returnValue);
-            }
-            public void onNothingSelected(AdapterView<?> parent) {}});
-        //when item is selected, it sets it's Value variable
-        defendedSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                String returnValue = parent.getSelectedItem().toString();
+        defendedSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
+                String returnValue = (String)parent.getItemAtPosition(position);
                 Values.notes_defended = Integer.parseInt(returnValue);
-                Toast.makeText(getActivity(), "Selected Item: " + parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
-            public void onNothingSelected(AdapterView<?> parent) {}});
-*/
-        //adding switch
+        });
+
+        //adding switch return values
         // robot break
         robot_break.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {@Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -101,6 +95,13 @@ public class NotesFragment extends Fragment {
         robot_penalties.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {@Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             Values.notes_penalty = robot_penalties.isChecked();}
+        });
+
+        //adding type box return values
+        typeBox.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(Editable s) {Values.notes_type_box = typeBox.getText().toString();}
         });
 
         // Inflate the layout for this fragment
