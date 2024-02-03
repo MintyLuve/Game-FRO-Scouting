@@ -5,17 +5,22 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fro.gamefroscouting.R;
+import com.google.android.material.materialswitch.MaterialSwitch;
 
 public class AutoFragment extends Fragment {
+    //dropdown
     Spinner posSpinner;
-
+    //switch
+    MaterialSwitch leave_com;
     //cone bottom
     ImageButton coBoPlus;
     ImageButton coBoMinus;
@@ -47,7 +52,9 @@ public class AutoFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_auto, container, false);
         //instantiating
         //spinner
-        posSpinner =  rootView.findViewById(R.id.posSpinner);
+        posSpinner = rootView.findViewById(R.id.posSpinner);
+        //switch
+        leave_com = rootView.findViewById(R.id.leaveSwitch);
         //cone bottom
         coBoPlus = rootView.findViewById(R.id.co_bo_plus);
         coBoMinus = rootView.findViewById(R.id.co_bo_minus);
@@ -78,6 +85,37 @@ public class AutoFragment extends Fragment {
                 (getActivity(), R.array.end_pos, android.R.layout.simple_spinner_item);
         posAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         posSpinner.setAdapter(posAdapter);
+
+        //Saving values when switching pages
+        //leave community switch
+        leave_com.setChecked(Values.auto_leave_com);
+        // spinner
+        int spinnerPosition = posAdapter.getPosition(Values.auto_end_pos);
+        posSpinner.setSelection(spinnerPosition);
+        //cones
+        coBoNum.setText(""+Values.auto_co_bo);
+        coMiNum.setText(""+Values.auto_co_mi);
+        coToNum.setText(""+Values.auto_co_to);
+        //cubes
+        cuBoNum.setText(""+Values.auto_cu_bo);
+        cuMiNum.setText(""+Values.auto_cu_mi);
+        cuToNum.setText(""+Values.auto_cu_to);
+
+        //when item is selected, it sets it's Value var
+        posSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                Values.auto_end_pos = parent.getItemAtPosition(pos).toString();
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+        //adding switch
+        leave_com.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Values.auto_leave_com = leave_com.isChecked();}
+        });
 
         //adding functions to them
         // cone bottom
