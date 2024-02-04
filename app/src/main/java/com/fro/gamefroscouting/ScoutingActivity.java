@@ -38,8 +38,6 @@ public class ScoutingActivity extends AppCompatActivity {
     //defining buttons
     Button yesButton;
     Button noButton;
-    //defining text view
-    TextView confirmation;
     //defining frame
     ConstraintLayout frame;
 
@@ -52,7 +50,6 @@ public class ScoutingActivity extends AppCompatActivity {
         yesButton = (Button) findViewById(R.id.yesButton);
         noButton = (Button) findViewById(R.id.noButton);
         //init textview
-        confirmation = (TextView) findViewById(R.id.confirmation);
         //init frame
         frame = findViewById(R.id.confirmFrame);
         //init var
@@ -154,17 +151,13 @@ public class ScoutingActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         frame.setVisibility(View.VISIBLE);
-                        yesButton.setVisibility(View.VISIBLE);
-                        noButton.setVisibility(View.VISIBLE);
-                        confirmation.setVisibility(View.VISIBLE);
                         snackbar.dismiss();
 
                         //If yes button is clicked, sets the buttons invisible, and outputs the data into a JSON
                         yesButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                yesButton.setVisibility(View.INVISIBLE);
-                                noButton.setVisibility(View.INVISIBLE);
+                                frame.setVisibility(View.INVISIBLE);
                                 //Calls submitJSON class and submits all data
                                 SubmitJSON submitJSON = new SubmitJSON();
                                 submitJSON.submitData(getApplicationContext().getFilesDir());
@@ -181,9 +174,6 @@ public class ScoutingActivity extends AppCompatActivity {
                         noButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                yesButton.setVisibility(View.INVISIBLE);
-                                noButton.setVisibility(View.INVISIBLE);
-                                confirmation.setVisibility(View.INVISIBLE);
                                 frame.setVisibility(View.INVISIBLE);
                             }
                         });

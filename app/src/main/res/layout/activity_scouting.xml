@@ -72,49 +72,49 @@
             android:id="@+id/confirmFrame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:visibility="invisible">
+            android:background="@drawable/box_background"
+            android:visibility="invisible"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center">
             <TextView
-                android:id="@+id/confirmation"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Send To Database?"
                 android:textAlignment="center"
                 android:autoSizeTextType="uniform"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/helvetica_bold"
                 app:layout_constraintBottom_toTopOf="@+id/yesButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginBottom="10dp" />
+                android:layout_margin="10dp" />
 
             <Button
                 android:id="@+id/yesButton"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:backgroundTint="#1AFF00"
-                android:textColor="@color/black"
+                android:backgroundTint="#9FFF94"
+                android:textColor="@color/textGrey"
                 android:text="Yes"
-                android:textSize="30sp"
-                android:onClick="submitAnswers"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
                 app:layout_constraintEnd_toStartOf="@id/noButton"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="158dp"
-                tools:layout_editor_absoluteY="568dp" />
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"/>
             <Button
                 android:id="@+id/noButton"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:backgroundTint="#FF0000"
-                android:textColor="@color/black"
+                android:backgroundTint="#FF7777"
+                android:textColor="@color/textGrey"
                 android:text="No"
-                android:textSize="30sp"
-                android:onClick="submitAnswers"
+                android:lines="1"
+                android:autoSizeTextType="uniform"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/yesButton"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="158dp"
-                tools:layout_editor_absoluteY="568dp" />
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
