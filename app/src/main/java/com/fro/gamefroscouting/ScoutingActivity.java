@@ -170,6 +170,10 @@ public class ScoutingActivity extends AppCompatActivity {
                                 submitJSON.submitData(getApplicationContext().getFilesDir());
                                 submitJSON.showToast(ScoutingActivity.this, getApplicationContext().getFilesDir());
 
+                                //Calls ClearValues class and clears all data
+                                ClearValues clearValues = new ClearValues();
+                                clearValues.clearData();
+
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             }
                         });
