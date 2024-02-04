@@ -68,6 +68,55 @@
                 android:contentDescription="@string/content_desc"/>
         </FrameLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/confirmFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="invisible">
+            <TextView
+                android:id="@+id/confirmation"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Send To Database?"
+                android:textAlignment="center"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintBottom_toTopOf="@+id/yesButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/yesButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:backgroundTint="#1AFF00"
+                android:textColor="@color/black"
+                android:text="Yes"
+                android:textSize="30sp"
+                android:onClick="submitAnswers"
+                app:layout_constraintEnd_toStartOf="@id/noButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="568dp" />
+            <Button
+                android:id="@+id/noButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:backgroundTint="#FF0000"
+                android:textColor="@color/black"
+                android:text="No"
+                android:textSize="30sp"
+                android:onClick="submitAnswers"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/yesButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="568dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
