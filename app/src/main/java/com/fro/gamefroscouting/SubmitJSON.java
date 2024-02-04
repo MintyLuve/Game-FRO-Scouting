@@ -18,17 +18,40 @@ public class SubmitJSON {
     public void submitData(File path){
         JSONObject jsonObject = new JSONObject();
 
-        try {jsonObject.put("SCOUTER_NAME", Values.start_scout_name);}
-        catch (JSONException e) {throw new RuntimeException(e);}
+        //start page
+        try {jsonObject.put("SCOUTER_NAME", Values.start_scout_name);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TEAM_NUMBER", Values.start_team_num);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ROBOT_START_POSITION",Values.start_robo_pos);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("MATCH_NUMBER", Values.start_match_num);} catch (JSONException e) {throw new RuntimeException(e);}
 
-        try {jsonObject.put("ROBOT_START_POSITION",Values.start_robo_pos);}
-        catch (JSONException e) {throw new RuntimeException(e);}
+        //auto page
+        try {jsonObject.put("AUTO_LEAVE_COMMUNITY", Values.auto_leave_com);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_END_POSITION", Values.auto_end_pos);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_CONE_BOTTOM_ROW", Values.auto_co_bo);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_CONE_MIDDLE_ROW", Values.auto_co_mi);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_CONE_TOP_ROW", Values.auto_co_to);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_CUBE_BOTTOM_ROW", Values.auto_cu_bo);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_CUBE_MIDDLE_ROW", Values.auto_cu_mi);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_CUBE_TOP_ROW", Values.auto_cu_to);} catch (JSONException e) {throw new RuntimeException(e);}
 
-        try {jsonObject.put("TEAM_NUMBER", Values.start_team_num);}
-        catch (JSONException e) {throw new RuntimeException(e);}
+        //teleop page
+        try {jsonObject.put("GROUND_PICKUP", Values.tele_ground);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("SINGLE_STATION_PICKUP", Values.tele_single);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("DOUBLE_STATION_PICKUP", Values.tele_double);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_CONE_BOTTOM_ROW", Values.tele_co_bo);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_CONE_MIDDLE_ROW", Values.tele_co_mi);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_CONE_TOP_ROW", Values.tele_co_to);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_CUBE_BOTTOM_ROW", Values.tele_cu_bo);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_CUBE_MIDDLE_ROW", Values.tele_cu_mi);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_CUBE_TOP_ROW", Values.tele_cu_to);} catch (JSONException e) {throw new RuntimeException(e);}
 
-        try {jsonObject.put("MATCH_NUMBER", Values.start_match_num);}
-        catch (JSONException e) {throw new RuntimeException(e);}
+        //notes page
+        try {jsonObject.put("DEFENDED_THIS_ROBOT", Values.notes_defends);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("DEFENDED_BY_THIS_ROBOT", Values.notes_defended);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ROBOT_BREAK", Values.notes_robo_break);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ROBOT_TIP", Values.notes_robo_tip);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ANY_PENALTIES", Values.notes_penalty);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("NOTES_BOX", Values.notes_type_box);} catch (JSONException e) {throw new RuntimeException(e);}
 
         try {toJSON(jsonObject, path);} catch (IOException e) {e.printStackTrace();}
     }

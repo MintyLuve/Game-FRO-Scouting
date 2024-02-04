@@ -157,6 +157,7 @@ public class ScoutingActivity extends AppCompatActivity {
                         yesButton.setVisibility(View.VISIBLE);
                         noButton.setVisibility(View.VISIBLE);
                         confirmation.setVisibility(View.VISIBLE);
+                        snackbar.dismiss();
 
                         //If yes button is clicked, sets the buttons invisible, and outputs the data into a JSON
                         yesButton.setOnClickListener(new View.OnClickListener() {
@@ -164,6 +165,7 @@ public class ScoutingActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 yesButton.setVisibility(View.INVISIBLE);
                                 noButton.setVisibility(View.INVISIBLE);
+                                //Calls submitJSON class and submits all data
                                 SubmitJSON submitJSON = new SubmitJSON();
                                 submitJSON.submitData(getApplicationContext().getFilesDir());
                                 submitJSON.showToast(ScoutingActivity.this, getApplicationContext().getFilesDir());
