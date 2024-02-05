@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/darkBlue"
+    android:weightSum="4">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/endgame_header"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        style="@style/header_text_light"
+        android:layout_weight="1"/>
+    <ImageView
+        android:layout_width="267dp"
+        android:layout_height="5dp"
+        android:background="@drawable/dotted_line_light"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/content_desc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="213dp"
+        android:background="@drawable/box_background"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="14dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/end_end_pos"
+            style="@style/large_box_text"
+            android:layout_weight="1"/>
+        <Spinner
+            android:id="@+id/posSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@drawable/dropdown_background"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
