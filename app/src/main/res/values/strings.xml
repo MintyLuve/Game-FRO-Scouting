@@ -25,9 +25,13 @@
 
     <!--Tele Op-->
     <string name="teleop_header">Tele Op</string>
-    <string name="tele_speaker">Speaker</string>
+    <string name="tele_nSpeaker">Speaker\nNot Amplified</string>
+    <string name="tele_aSpeaker">Speaker\nAmplified</string>
     <string name="tele_amp">Amp</string>
     <string name="tele_trap">Trap</string>
+    <string name="tele_ground">Ground\nPickup</string>
+    <string name="tele_station">Station\nPickup</string>
+    <string name="tele_bonus">Coopertition\nBonus</string>
 
     <!--Endgame-->
     <string name="endgame_header">End Game</string>
