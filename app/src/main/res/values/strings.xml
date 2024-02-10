@@ -13,6 +13,7 @@
     <string name="team_num">Team\nNumber:</string>
     <string name="rob_pos">Robot\nPosition:</string>
     <string name="match_num">Match\nNumber:</string>
+    <string name="hum_pos">Human\nPlayer\nPosition:</string>
     <string name="start_scouting">Start Scouting</string>
 
     <!--Auto-->
