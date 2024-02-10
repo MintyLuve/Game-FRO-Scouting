@@ -18,24 +18,19 @@
 
     <!--Auto-->
     <string name="auto_header">Auto</string>
-    <string name="leave_comm">Leave\nCommunity</string>
-    <string name="auto_end_pos">Auto\nEnd Position</string>
-    <string name="cone_bot_row">Cone\nBottom Row</string>
-    <string name="cone_mid_row">Cone\nMiddle Row</string>
-    <string name="cone_top_row">Cone\n Top Row </string>
-    <string name="cube_bot_row">Cube\nBottom Row</string>
-    <string name="cube_mid_row">Cube\nMiddle Row</string>
-    <string name="cube_top_row">Cube\nTop Row</string>
+    <string name="auto_leave">Leave Robot\nStarting Zone</string>
+    <string name="auto_speaker">Speaker</string>
+    <string name="auto_amp">Amp</string>
+    <string name="auto_trap">Trap</string>
 
     <!--Tele Op-->
     <string name="teleop_header">Tele Op</string>
-    <string name="pickup_ground">Ground\nPickup</string>
-    <string name="pickup_single">Single\nPickup</string>
-    <string name="pickup_double">Double\nPickup</string>
+    <string name="tele_speaker">Speaker</string>
+    <string name="tele_amp">Amp</string>
+    <string name="tele_trap">Trap</string>
 
     <!--Endgame-->
     <string name="endgame_header">End Game</string>
-    <string name="end_end_pos">End Game\nEnd Position</string>
 
     <!--Notes-->
     <string name="notes_header">Notes</string>
