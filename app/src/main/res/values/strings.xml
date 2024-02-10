@@ -64,8 +64,8 @@
 
     <!-- Long Strings -->
     <string name="help_screen_bottom">
-\t \u25CF Coopertition Bonus = If both team’s amp human player hit the button in the first 40 seconds
-\t \u25CF Spotlight = Human player scored a note on a microphone corresponding to a chain with a robot on it
+\t \u25CF Coopertition Bonus = If both team’s amp human player hit the button in the first 40 seconds\n
+\t \u25CF Spotlight = Human player scored a note on a microphone corresponding to a chain with a robot on it\n
 \t \u25CF Onstage = The robot is fully not toughing the ground. (Left/Right is by the driver’s pov)</string>
     <string name="help_screen_top">
 \t 1. Check the match number and the position assigned to you on the scouting schedule. \n
@@ -87,9 +87,22 @@
 
     <string-array name="end_pos">
         <item>Parked</item>
-        <item>Docked</item>
-        <item>Engaged</item>
+        <item>Onstage Left</item>
+        <item>Center Stage</item>
+        <item>Onstage Right</item>
         <item>None of The Above</item>
+    </string-array>
+
+    <string-array name="climb_type">
+        <item>single</item>
+        <item>double</item>
+        <item>triple</item>
+    </string-array>
+
+    <string-array name="hum_pos">
+        <item>Source</item>
+        <item>Amp</item>
+        <item>Cannot Tell</item>
     </string-array>
 
     <string-array name="team_numbers">
