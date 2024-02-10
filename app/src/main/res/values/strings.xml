@@ -35,6 +35,14 @@
 
     <!--Endgame-->
     <string name="endgame_header">End Game</string>
+    <string name="eg_pos">End\nPosition</string>
+    <string name="eg_climb">Climb\nType</string>
+    <string name="eg_buddy">Buddy\nClimb</string>
+    <string name="eg_os_left">Spotlight\nOnstage Left</string>
+    <string name="eg_os_center">Spotlight\nCenter Stage</string>
+    <string name="eg_os_right">Spotlight\nOnstage Right</string>
+    <string name="eg_throws_made">Throws\nMade</string>
+    <string name="eg_throws_miss">Throws\nMissed</string>
 
     <!--Notes-->
     <string name="notes_header">Notes</string>
