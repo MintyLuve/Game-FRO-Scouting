@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="90dp"
-            android:id="@+id/frame_layout"/>
+            android:id="@+id/replaceFrame"/>
     </LinearLayout>
 
 
@@ -43,7 +43,7 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
+            android:id="@+id/menu_items"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:background="@drawable/nothing"

@@ -186,31 +186,22 @@
         android:layout_marginBottom="40dp"
         android:layout_marginTop="20dp"
         android:weightSum="4">
-        <FrameLayout
+        <TextView
+            android:id="@+id/startButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/box_background"
-            android:layout_gravity="center"
+            android:autoSizeTextType="uniform"
+            android:text="@string/start_scouting"
+            android:fontFamily="@font/helvetica_bold"
+            android:textColor="@color/textGrey"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
             android:layout_weight="3"
-            android:layout_marginEnd="10dp">
-            <Button
-                android:contentDescription="@string/content_desc"
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/transparent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autoSizeTextType="uniform"
-                android:text="@string/start_scouting"
-                android:fontFamily="@font/helvetica_bold"
-                android:textColor="@color/textGrey"
-                android:textSize="50sp"
-                android:padding="10dp"
-                android:gravity="center" />
+            android:clickable="true"
+            android:focusable="true" />
 
-        </FrameLayout>
         <ImageButton
             android:contentDescription="@string/content_desc"
             android:id="@+id/helpButton"
