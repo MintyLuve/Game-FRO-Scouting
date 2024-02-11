@@ -1,9 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoutingActivity">
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="90dp"
+            android:id="@+id/frame_layout"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/menu_bar_background"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:weightSum="6">
+
+        <ImageButton
+            android:contentDescription="@string/content_desc"
+            android:id="@+id/menuButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            style="@style/increment_buttons"
+            android:src="@drawable/menu_bars_button"
+            android:layout_margin="5dp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/nothing"
+            android:layout_gravity="center"
+            app:itemRippleColor="@color/white"
+            app:itemIconSize="55dp"
+            app:itemBackground="@drawable/nothing"
+            app:menu="@menu/menu_pages"
+            android:layout_weight="4"/>
+
+        <ImageButton
+            android:contentDescription="@string/content_desc"
+            android:id="@+id/helpButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            style="@style/increment_buttons"
+            android:src="@drawable/menu_help_button"
+            android:layout_margin="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirmFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_background"
+        android:visibility="invisible"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Send To Database?"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/helvetica_bold"
+            app:layout_constraintBottom_toTopOf="@+id/yesButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:id="@+id/yesButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#9FFF94"
+            android:textColor="@color/textGrey"
+            android:text="Yes"
+            android:lines="1"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@id/noButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"/>
+        <Button
+            android:id="@+id/noButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#FF7777"
+            android:textColor="@color/textGrey"
+            android:text="No"
+            android:lines="1"
+            android:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/yesButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
