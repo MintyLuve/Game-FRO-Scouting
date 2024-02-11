@@ -25,11 +25,11 @@
         android:background="@drawable/help_scouting_background"
         app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="vertical"
-        android:weightSum="5">
+        android:weightSum="11">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="0dp"
             android:text="@string/help_header_1"
             style="@style/header_text_dark"
             android:layout_margin="5dp"
@@ -38,13 +38,13 @@
             android:layout_weight="1"/>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="@string/help_screen_top"
             style="@style/help_box_text"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="10dp"
             android:layout_marginEnd="20dp"
-            android:layout_weight="1"
+            android:layout_weight="4.5"
             />
         <ImageView
             android:layout_width="267dp"
@@ -54,7 +54,7 @@
             android:contentDescription="@string/content_desc" />
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="0dp"
             android:text="@string/help_header_2"
             style="@style/header_text_dark"
             android:layout_margin="5dp"
@@ -65,17 +65,17 @@
         <TextView
             style="@style/help_box_text"
             android:layout_width="match_parent"
-            android:layout_height="99dp"
+            android:layout_height="0dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
-            android:layout_weight="1"
+            android:layout_weight="2.5"
             android:text="@string/help_screen_bottom" />
         <View
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="0dp"
             android:background="@drawable/help_reference_img"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"/>
     </LinearLayout>
