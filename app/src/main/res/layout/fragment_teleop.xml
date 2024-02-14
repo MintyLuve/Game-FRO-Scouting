@@ -66,10 +66,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 style="@style/box_text"
-                android:text="@string/tele_station"
+                android:text="@string/tele_source"
                 android:layout_weight="1"/>
             <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/stationSwitch"
+                android:id="@+id/sourceSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_gravity="center_horizontal"

@@ -9,7 +9,7 @@ public class Values {
     public static boolean auto_leave_start;
     //teleop
     public static int tele_aSpeaker, tele_nSpeaker, tele_amp, tele_trap;
-    public static boolean tele_ground_pickup, tele_station_pickup, tele_bonus;
+    public static boolean tele_ground_pickup, tele_source_pickup, tele_bonus;
     //end game
     public static int eg_made, eg_missed, eg_end_pos, eg_climb_type;
     public static boolean eg_spot_left, eg_spot_center, eg_spot_right, eg_buddy_climb;
