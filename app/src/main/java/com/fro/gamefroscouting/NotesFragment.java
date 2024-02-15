@@ -67,7 +67,7 @@ public class NotesFragment extends Fragment {
         //type box
         typeBox.setText(Values.notes_type_box);
 
-        //spinner return values
+        //dropdown type return values
         defendsType.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
             @Override public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}

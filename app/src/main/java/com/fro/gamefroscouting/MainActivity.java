@@ -6,7 +6,10 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         humSpinner = findViewById(R.id.humanSpinner);
 
         String[] teamNums = getResources().getStringArray(R.array.team_numbers);
-        //dropdowns
+        //adds options to the team type box
         ArrayAdapter<String> adapter=new ArrayAdapter<String>
                 (this, android.R.layout.simple_dropdown_item_1line, teamNums);
         teamType.setThreshold(1);
@@ -59,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
                 (this, R.array.positions, android.R.layout.simple_spinner_item);
         posAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         posSpinner.setAdapter(posAdapter);
+        // adds options to the human player spinner
+        ArrayAdapter<CharSequence> humAdapter = ArrayAdapter.createFromResource
+                (this, R.array.hum_pos, android.R.layout.simple_spinner_item);
+        humAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        humSpinner.setAdapter(humAdapter);
 
         //Saving values when switching pages
         //type dropdown
@@ -69,6 +77,42 @@ public class MainActivity extends AppCompatActivity {
         //type boxes
         scouterName.setText(Values.start_scout_name);
         matchNum.setText(empty+ Values.start_match_num);
+
+        //when item is selected, it sets it's Value var
+        posSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.start_robot_pos = posSpinner.getSelectedItemPosition();}
+            public void onNothingSelected(AdapterView<?> parent) {Values.start_robot_pos = parent.getSelectedItemPosition();}
+        });
+        humSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.start_human_pos = humSpinner.getSelectedItemPosition();}
+            public void onNothingSelected(AdapterView<?> parent) {Values.start_human_pos = parent.getSelectedItemPosition();}
+        });
+        //dropdown type return values
+        teamType.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            @Override public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            @Override public void afterTextChanged(Editable editable) {
+                String text = teamType.getText().toString();
+                if (!text.equals("")){
+                    Values.start_team_num = Integer.parseInt(teamType.getText().toString());
+                }}
+        });
+
+        //adding scouter name return values
+        scouterName.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(Editable s) {Values.start_scout_name = scouterName.getText().toString();}
+        });
+        matchNum.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(Editable s) {
+                String stringVal = matchNum.getText().toString();
+                if (!stringVal.isEmpty()){Values.start_match_num = Integer.parseInt(stringVal);}
+                else {Values.start_match_num = 0;}
+            }
+        });
 
         // changes to next page on click
         startButton.setOnClickListener(new View.OnClickListener() {
