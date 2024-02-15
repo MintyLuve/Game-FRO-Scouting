@@ -35,11 +35,8 @@ public class EndgameFragment extends Fragment {
     //spinners
     Spinner posSpinner;
     Spinner climbSpinner;
-
-    //int totThrows = 3;
-    //int throwsMade = 0;
-    //int throwsMissed = 0;
-
+    // misc
+    int maxThrows = 3;
     String empty = "";
 
     @Override
@@ -90,15 +87,13 @@ public class EndgameFragment extends Fragment {
 
         //when pos item is selected, it sets it's Value var
         posSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                Toast.makeText(getContext(), posSpinner.getId(), Toast.LENGTH_SHORT).show();
-                Values.eg_end_pos = posSpinner.getId();}
-            public void onNothingSelected(AdapterView<?> parent) {Values.eg_end_pos = posSpinner.getId();}
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_end_pos = posSpinner.getSelectedItemPosition();}
+            public void onNothingSelected(AdapterView<?> parent) {Values.eg_end_pos = parent.getSelectedItemPosition();}
         });
         //when climb item is selected, it sets it's Value var
         climbSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_climb_type = parent.getId();}
-            public void onNothingSelected(AdapterView<?> parent) {Values.eg_climb_type = parent.getId();}
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_climb_type = parent.getSelectedItemPosition();}
+            public void onNothingSelected(AdapterView<?> parent) {Values.eg_climb_type = parent.getSelectedItemPosition();}
         });
 
         //adding bonus switch
@@ -128,20 +123,26 @@ public class EndgameFragment extends Fragment {
 
         //adding functions to number buttons
         //throws made
-        plusOne(madePlus, madeNum,1, 3);
+        plusOne(madePlus, madeNum,1);
         minusOne(madeMinus, madeNum,1);
         // throws missed
-        plusOne(missedPlus, missedNum,2, 3);
+        plusOne(missedPlus, missedNum,2);
         minusOne(missedMinus, missedNum,2);
 
         // Inflate the layout for this fragment
         return rootView;
     }
 
-    void plusOne(ImageButton button, TextView num, int key, int max){
+    void plusOne(ImageButton button, TextView num, int key){
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // gets the max value (so there can't be more than 3 total throws)
+                int max = maxThrows;
+                switch (key){
+                    case 1: max = maxThrows - Values.eg_missed; break;
+                    case 2: max = maxThrows - Values.eg_made; break;
+                }
                 //gets the number from the view
                 int number = Integer.parseInt(num.getText().toString());
                 //sets the view to the number + 1
@@ -151,12 +152,8 @@ public class EndgameFragment extends Fragment {
                     num.setText(numOutput);
                 }
                 switch (key) {
-                    case 1:
-                        Values.eg_made = number;
-                        break;
-                    case 2:
-                        Values.eg_missed = number;
-                        break;
+                    case 1: Values.eg_made = number; break;
+                    case 2: Values.eg_missed = number; break;
                 }
             }
         });
@@ -174,12 +171,8 @@ public class EndgameFragment extends Fragment {
                     num.setText(numOutput);
                 }
                 switch (key) {
-                    case 1:
-                        Values.eg_made = number;
-                        break;
-                    case 2:
-                        Values.eg_missed = number;
-                        break;
+                    case 1: Values.eg_made = number; break;
+                    case 2: Values.eg_missed = number; break;
                 }
             }
         });
