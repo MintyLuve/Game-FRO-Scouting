@@ -30,6 +30,8 @@ public class NotesFragment extends Fragment {
     AutoCompleteTextView defendedType;
     //notes box
     EditText typeBox;
+    //misc
+    String empty = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -66,16 +68,24 @@ public class NotesFragment extends Fragment {
         typeBox.setText(Values.notes_type_box);
 
         //spinner return values
-        defendsType.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
-                String returnValue = (String)parent.getItemAtPosition(position);
-                Values.notes_defends = Integer.parseInt(returnValue);
+        defendsType.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            @Override public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            @Override public void afterTextChanged(Editable editable) {
+                String text = defendsType.getText().toString();
+                if (!text.equals("")){
+                    Values.notes_defends = Integer.parseInt(defendsType.getText().toString());
+                }
             }
         });
-        defendedType.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
-                String returnValue = (String)parent.getItemAtPosition(position);
-                Values.notes_defended = Integer.parseInt(returnValue);
+        defendedType.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            @Override public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            @Override public void afterTextChanged(Editable editable) {
+                String text = defendedType.getText().toString();
+                if (!text.equals("")){
+                    Values.notes_defended = Integer.parseInt(defendedType.getText().toString());
+                }
             }
         });
 
