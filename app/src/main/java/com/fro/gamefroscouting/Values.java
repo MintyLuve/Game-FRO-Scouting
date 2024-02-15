@@ -2,8 +2,8 @@ package com.fro.gamefroscouting;
 
 public class Values {
     //start
-    public static int start_team_num, start_match_num, start_human_pos;
-    public static String start_scout_name, start_robot_pos;
+    public static int start_team_num, start_match_num, start_human_pos, start_robot_pos;
+    public static String start_scout_name;
     //auto
     public static int auto_speaker, auto_amp, auto_trap;
     public static boolean auto_leave_start;

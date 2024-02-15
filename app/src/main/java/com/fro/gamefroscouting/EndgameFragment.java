@@ -62,15 +62,15 @@ public class EndgameFragment extends Fragment {
 
         // adds options to the position spinner
         ArrayAdapter<CharSequence> posAdapter = ArrayAdapter.createFromResource
-                (getActivity(), R.array.positions, android.R.layout.simple_spinner_item);
+                (getActivity(), R.array.end_pos, android.R.layout.simple_spinner_item);
         posAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         posSpinner.setAdapter(posAdapter);
 
         // adds options to the climb type spinner
         ArrayAdapter<CharSequence> climbAdapter = ArrayAdapter.createFromResource
                 (getActivity(), R.array.climb_type, android.R.layout.simple_spinner_item);
-        posAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        climbSpinner.setAdapter(posAdapter);
+        climbAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        climbSpinner.setAdapter(climbAdapter);
 
         //Saving values when switching pages
         //leave community switch
@@ -80,7 +80,7 @@ public class EndgameFragment extends Fragment {
         rightSwitch.setChecked(Values.eg_spot_right);
         // dropdown
         posSpinner.setSelection(Values.eg_end_pos);
-        climbSpinner.setSelection(Values.eg_climb_type);
+        climbSpinner.setSelection(Values.eg_climb_type-1);
         //made
         madeNum.setText(empty+Values.eg_made);
         missedNum.setText(empty+Values.eg_missed);
@@ -92,8 +92,8 @@ public class EndgameFragment extends Fragment {
         });
         //when climb item is selected, it sets it's Value var
         climbSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_climb_type = parent.getSelectedItemPosition();}
-            public void onNothingSelected(AdapterView<?> parent) {Values.eg_climb_type = parent.getSelectedItemPosition();}
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_climb_type = parent.getSelectedItemPosition()+1;}
+            public void onNothingSelected(AdapterView<?> parent) {Values.eg_climb_type = parent.getSelectedItemPosition()+1;}
         });
 
         //adding bonus switch

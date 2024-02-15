@@ -90,13 +90,12 @@
         <item>Onstage Left</item>
         <item>Center Stage</item>
         <item>Onstage Right</item>
-        <item>None of The Above</item>
     </string-array>
 
     <string-array name="climb_type">
-        <item>single</item>
-        <item>double</item>
-        <item>triple</item>
+        <item>Single</item>
+        <item>Double</item>
+        <item>Triple</item>
     </string-array>
 
     <string-array name="hum_pos">
