@@ -54,7 +54,7 @@
                 android:text="@string/robot"
                 android:layout_weight="1"/>
             <AutoCompleteTextView
-                android:id="@+id/defendsSpinner"
+                android:id="@+id/defendsType"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:hint="@string/default_type"
@@ -85,7 +85,7 @@
                 android:text="@string/robot"
                 android:layout_weight="1"/>
             <AutoCompleteTextView
-                android:id="@+id/defendedSpinner"
+                android:id="@+id/defendedType"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:hint="@string/default_type"
