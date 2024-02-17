@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -74,44 +73,41 @@
         android:visibility="invisible"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:padding="10dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Send To Database?"
+            android:text="Submit Data?"
             android:textAlignment="center"
             android:autoSizeTextType="uniform"
-            android:fontFamily="@font/helvetica_bold"
+            android:fontFamily="@font/helvetica"
             app:layout_constraintBottom_toTopOf="@+id/yesButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_margin="10dp" />
 
-        <Button
+        <ImageButton
+            android:contentDescription="@string/content_desc"
             android:id="@+id/yesButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:backgroundTint="#9FFF94"
-            android:textColor="@color/textGrey"
-            android:text="Yes"
-            android:lines="1"
-            android:autoSizeTextType="uniform"
-            app:layout_constraintEnd_toStartOf="@id/noButton"
+            android:background="@color/transparent"
+            style="@style/increment_buttons"
+            android:src="@drawable/submit_yes_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            style="@style/Widget.Material3.Button.OutlinedButton.Icon"/>
-        <Button
+            app:layout_constraintEnd_toStartOf="@id/noButton"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageButton
+            android:contentDescription="@string/content_desc"
             android:id="@+id/noButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:backgroundTint="#FF7777"
-            android:textColor="@color/textGrey"
-            android:text="No"
-            android:lines="1"
-            android:autoSizeTextType="uniform"
+            android:background="@color/transparent"
+            style="@style/increment_buttons"
+            android:src="@drawable/submit_no_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/yesButton"
-            app:layout_constraintBottom_toBottomOf="parent"
-            style="@style/Widget.Material3.Button.OutlinedButton.Icon"/>
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

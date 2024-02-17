@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
@@ -23,6 +24,13 @@ public class ScoutingActivity extends AppCompatActivity {
     //mg buttons
     ImageButton helpButton;
     ImageButton menuButton;
+    // init buttons
+    ImageButton yesButton;
+    ImageButton noButton;
+    //init frame
+    View frame;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +41,11 @@ public class ScoutingActivity extends AppCompatActivity {
         //mg buttons
         helpButton = findViewById(R.id.helpButton);
         menuButton = findViewById(R.id.menuButton);
+        // init buttons
+        yesButton = findViewById(R.id.yesButton);
+        noButton = findViewById(R.id.noButton);
+        //init frame
+        frame = findViewById(R.id.confirmFrame);
 
         // switching fragments
         replaceFragment(new AutoFragment());
@@ -126,7 +139,33 @@ public class ScoutingActivity extends AppCompatActivity {
                 submit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        frame.setVisibility(View.VISIBLE);
+                        snackbar.dismiss();
+
+                        //If yes button is clicked, sets the buttons invisible, and outputs the data into a JSON
+                        yesButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                frame.setVisibility(View.INVISIBLE);
+                                //Calls submitJSON class and submits all data
+                                SubmitJSON submitJSON = new SubmitJSON();
+                                submitJSON.submitData(getApplicationContext().getFilesDir());
+                                submitJSON.showToast(ScoutingActivity.this, getApplicationContext().getFilesDir());
+
+                                //Calls ClearValues class and clears all data
+                                ClearValues clearValues = new ClearValues();
+                                clearValues.clearData();
+
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            }
+                        });
+                        //If the no button is clicked it hides the buttons
+                        noButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                frame.setVisibility(View.INVISIBLE);
+                            }
+                        });
                     }
                 });
                 // add the custom snack bar layout to snack bar layout
