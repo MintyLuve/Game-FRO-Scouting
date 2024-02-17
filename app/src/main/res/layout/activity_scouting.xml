@@ -79,13 +79,12 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Submit Data?"
-            android:textAlignment="center"
-            android:autoSizeTextType="uniform"
             android:fontFamily="@font/helvetica"
             app:layout_constraintBottom_toTopOf="@+id/yesButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            style="@style/misc_text"/>
 
         <ImageButton
             android:contentDescription="@string/content_desc"

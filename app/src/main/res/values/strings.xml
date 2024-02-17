@@ -60,6 +60,7 @@
     <!--Help Screen-->
     <string name="help_header_1">How To Scout</string>
     <string name="help_header_2">Important Reminders:</string>
+    <string name="click_to_close">Click Anywhere To Close</string>
 
 
     <!-- Long Strings -->
