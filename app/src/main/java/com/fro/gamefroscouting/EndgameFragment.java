@@ -79,21 +79,21 @@ public class EndgameFragment extends Fragment {
         centerSwitch.setChecked(Values.eg_spot_center);
         rightSwitch.setChecked(Values.eg_spot_right);
         // dropdown
-        posSpinner.setSelection(Values.eg_end_pos);
-        climbSpinner.setSelection(Values.eg_climb_type-1);
+        posSpinner.setSelection(getCheckedSelected(Values.eg_end_pos, -1));
+        climbSpinner.setSelection(Values.eg_climb_type);
         //made
         madeNum.setText(empty+Values.eg_made);
         missedNum.setText(empty+Values.eg_missed);
 
         //when pos item is selected, it sets it's Value var
         posSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_end_pos = posSpinner.getSelectedItemPosition();}
-            public void onNothingSelected(AdapterView<?> parent) {Values.eg_end_pos = parent.getSelectedItemPosition();}
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_end_pos = checkSelected(posSpinner, -1);}
+            public void onNothingSelected(AdapterView<?> parent) {Values.eg_end_pos = checkSelected(posSpinner, -1);}
         });
         //when climb item is selected, it sets it's Value var
         climbSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_climb_type = parent.getSelectedItemPosition()+1;}
-            public void onNothingSelected(AdapterView<?> parent) {Values.eg_climb_type = parent.getSelectedItemPosition()+1;}
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.eg_climb_type = checkSelected(climbSpinner, 0);}
+            public void onNothingSelected(AdapterView<?> parent) {Values.eg_climb_type = checkSelected(climbSpinner, 0);}
         });
 
         //adding bonus switch
@@ -177,4 +177,13 @@ public class EndgameFragment extends Fragment {
             }
         });
     }
+    public int checkSelected(Spinner spinner, int change){
+        if (spinner.getSelectedItem().toString().equals("Dropdown")){return -1;}
+        else {return spinner.getSelectedItemPosition() + change;}
+    }
+    public int getCheckedSelected(int value, int change){
+        if (value == -1){return 0;}
+        else {return value - change;}
+    }
+
 }

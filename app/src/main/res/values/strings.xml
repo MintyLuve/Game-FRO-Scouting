@@ -80,12 +80,14 @@
     <!-- Arrays -->
 
     <string-array name="positions">
+        <item>Dropdown</item>
         <item>Left</item>
         <item>Middle</item>
         <item>Right</item>
     </string-array>
 
     <string-array name="end_pos">
+        <item>Dropdown</item>
         <item>Parked</item>
         <item>Onstage Left</item>
         <item>Center Stage</item>
@@ -93,12 +95,14 @@
     </string-array>
 
     <string-array name="climb_type">
+        <item>Dropdown</item>
         <item>Single</item>
         <item>Double</item>
         <item>Triple</item>
     </string-array>
 
     <string-array name="hum_pos">
+        <item>Dropdown</item>
         <item>Source</item>
         <item>Amp</item>
         <item>Cannot Tell</item>
@@ -123,7 +127,6 @@
         <item>78</item>
         <item>826</item>
         <item>9995</item>
-
     </string-array>
 
 </resources>

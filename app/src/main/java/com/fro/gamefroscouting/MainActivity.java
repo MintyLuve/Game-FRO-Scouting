@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -80,12 +81,12 @@ public class MainActivity extends AppCompatActivity {
 
         //when item is selected, it sets it's Value var
         posSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.start_robot_pos = posSpinner.getSelectedItemPosition();}
-            public void onNothingSelected(AdapterView<?> parent) {Values.start_robot_pos = parent.getSelectedItemPosition();}
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.start_robot_pos = checkSelected(posSpinner, 0);}
+            public void onNothingSelected(AdapterView<?> parent) {Values.start_robot_pos = checkSelected(posSpinner, 0);}
         });
         humSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.start_human_pos = humSpinner.getSelectedItemPosition();}
-            public void onNothingSelected(AdapterView<?> parent) {Values.start_human_pos = parent.getSelectedItemPosition();}
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {Values.start_human_pos = checkSelected(humSpinner, 0);}
+            public void onNothingSelected(AdapterView<?> parent) {Values.start_human_pos = checkSelected(humSpinner, 0);}
         });
         //dropdown type return values
         teamType.addTextChangedListener(new TextWatcher() {
@@ -153,5 +154,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public int checkSelected(Spinner spinner, int change){
+        if (spinner.getSelectedItem().toString().equals("Dropdown")){return -1;}
+        else {return spinner.getSelectedItemPosition() + change;}
     }
 }

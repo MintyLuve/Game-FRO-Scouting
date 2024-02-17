@@ -11,7 +11,7 @@ public class Values {
     public static int tele_aSpeaker, tele_nSpeaker, tele_amp, tele_trap;
     public static boolean tele_ground_pickup, tele_source_pickup, tele_bonus;
     //end game
-    public static int eg_made, eg_missed, eg_end_pos, eg_climb_type;
+    public static int eg_made, eg_missed, eg_end_pos = -1, eg_climb_type;
     public static boolean eg_spot_left, eg_spot_center, eg_spot_right, eg_buddy_climb;
     //notes
     public static String notes_type_box;
