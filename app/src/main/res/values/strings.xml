@@ -108,24 +108,40 @@
     </string-array>
 
     <string-array name="team_numbers">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>101</item>
-        <item>2304</item>
-        <item>334</item>
-        <item>4092</item>
+        <item>25</item>
+        <item>303</item>
+        <item>341</item>
+        <item>423</item>
+        <item>427</item>
+        <item>433</item>
+        <item>708</item>
+        <item>709</item>
+        <item>816</item>
+        <item>1089</item>
+        <item>1143</item>
+        <item>1168</item>
+        <item>1391</item>
+        <item>1403</item>
+        <item>2095</item>
+        <item>2234</item>
+        <item>2458</item>
+        <item>2539</item>
+        <item>2559</item>
+        <item>2590</item>
+        <item>2607</item>
+        <item>3637</item>
+        <item>4285</item>
+        <item>4637</item>
+        <item>5181</item>
         <item>5401</item>
-        <item>6999</item>
-        <item>78</item>
-        <item>826</item>
-        <item>9995</item>
+        <item>5407</item>
+        <item>5684</item>
+        <item>5895</item>
+        <item>6226</item>
+        <item>6808</item>
+        <item>7414</item>
+        <item>9027</item>
+
     </string-array>
 
 </resources>
