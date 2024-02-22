@@ -1,6 +1,7 @@
 package com.fro.gamefroscouting;
 
 import android.content.Context;
+import android.os.Environment;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -15,7 +16,11 @@ public class SubmitJSON {
 
     Calendar calendar = Calendar.getInstance();
 
-    public void submitData(File path){
+    String pathToExternalStorage = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).toString();
+    File path = new File(pathToExternalStorage + "/" + "Scouting-2024");
+    //File file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+
+    public void submitData(){
         JSONObject jsonObject = new JSONObject();
 
         //start page
@@ -59,17 +64,17 @@ public class SubmitJSON {
         try {jsonObject.put("ANY_PENALTIES", Values.notes_penalty);} catch (JSONException e) {throw new RuntimeException(e);}
         try {jsonObject.put("NOTES_BOX", Values.notes_type_box);} catch (JSONException e) {throw new RuntimeException(e);}
 
-        try {toJSON(jsonObject, path);} catch (IOException e) {e.printStackTrace();}
+        try {toJSON(jsonObject);} catch (IOException e) {e.printStackTrace();}
     }
 
-    public void toJSON(JSONObject content, File path) throws IOException {
+    public void toJSON(JSONObject content) throws IOException {
         // Class to put the data into a JSON object
         FileOutputStream writer = new FileOutputStream(new File(path, "CRESCENDO_SCOUTING_DATA_" + calendar.getTimeInMillis() + ".json"));
         writer.write(content.toString().getBytes());
         writer.close();
     }
 
-    public void showToast(Context mContext, File path){
+    public void showToast(Context mContext){
         Toast.makeText(mContext, path.toString(), Toast.LENGTH_SHORT).show();
     }
 
