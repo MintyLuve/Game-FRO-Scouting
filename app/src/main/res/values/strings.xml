@@ -1,6 +1,6 @@
 <resources>
     <!--General-->
-    <string name="app_name">Game FRO Scouting</string>
+    <string name="app_name">FRO Scouting</string>
     <string name="content_desc">content desc</string>
     <string name="default_text">Empty\nBox</string>
     <string name="default_type">Type Here…</string>
