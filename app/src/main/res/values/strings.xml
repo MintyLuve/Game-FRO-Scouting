@@ -67,7 +67,7 @@
     <string name="help_screen_bottom">
 \t \u25CF Coopertition Bonus = If both team’s amp human player hit the button in the first 40 seconds\n
 \t \u25CF Spotlight = Human player scored a note on a microphone corresponding to a chain with a robot on it\n
-\t \u25CF Onstage = The robot is fully not toughing the ground. (Left/Right is by the driver’s pov)</string>
+\t \u25CF Onstage = The robot is fully not touching the ground. (Left/Right is by the driver’s pov)</string>
     <string name="help_screen_top">
 \t 1. Check the match number and the position assigned to you on the scouting schedule. \n
 \t 2. Enter your name, the robot number, and the robot position. \n
