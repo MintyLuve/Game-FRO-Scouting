@@ -1,6 +1,7 @@
 package com.fro.gamefroscouting;
 
 import android.content.Context;
+import android.os.Environment;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -15,35 +16,45 @@ public class SubmitJSON {
 
     Calendar calendar = Calendar.getInstance();
 
-    public void submitData(File path){
+    String pathToExternalStorage = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).toString();
+    File path = new File(pathToExternalStorage + "/" + "Scouting-2024");
+    //File file = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+
+    public void submitData(){
         JSONObject jsonObject = new JSONObject();
 
         //start page
         try {jsonObject.put("SCOUTER_NAME", Values.start_scout_name);} catch (JSONException e) {throw new RuntimeException(e);}
         try {jsonObject.put("TEAM_NUMBER", Values.start_team_num);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("ROBOT_START_POSITION",Values.start_robo_pos);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ROBOT_START_POSITION",Values.start_robot_pos);} catch (JSONException e) {throw new RuntimeException(e);}
         try {jsonObject.put("MATCH_NUMBER", Values.start_match_num);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("HUMAN_PLAYER_POSITION",Values.start_human_pos);} catch (JSONException e) {throw new RuntimeException(e);}
 
         //auto page
-        try {jsonObject.put("AUTO_LEAVE_COMMUNITY", Values.auto_leave_com);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("AUTO_END_POSITION", Values.auto_end_pos);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("AUTO_CONE_BOTTOM_ROW", Values.auto_co_bo);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("AUTO_CONE_MIDDLE_ROW", Values.auto_co_mi);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("AUTO_CONE_TOP_ROW", Values.auto_co_to);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("AUTO_CUBE_BOTTOM_ROW", Values.auto_cu_bo);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("AUTO_CUBE_MIDDLE_ROW", Values.auto_cu_mi);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("AUTO_CUBE_TOP_ROW", Values.auto_cu_to);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_LEAVE_START", Values.auto_leave_start);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_SPEAKER", Values.auto_speaker);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_AMP", Values.auto_amp);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("AUTO_TRAP", Values.auto_trap);} catch (JSONException e) {throw new RuntimeException(e);}
 
         //teleop page
-        try {jsonObject.put("GROUND_PICKUP", Values.tele_ground);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("SINGLE_STATION_PICKUP", Values.tele_single);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("DOUBLE_STATION_PICKUP", Values.tele_double);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("TELEOP_CONE_BOTTOM_ROW", Values.tele_co_bo);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("TELEOP_CONE_MIDDLE_ROW", Values.tele_co_mi);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("TELEOP_CONE_TOP_ROW", Values.tele_co_to);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("TELEOP_CUBE_BOTTOM_ROW", Values.tele_cu_bo);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("TELEOP_CUBE_MIDDLE_ROW", Values.tele_cu_mi);} catch (JSONException e) {throw new RuntimeException(e);}
-        try {jsonObject.put("TELEOP_CUBE_TOP_ROW", Values.tele_cu_to);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("GROUND_PICKUP", Values.tele_ground_pickup);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("SOURCE_PICKUP", Values.tele_source_pickup);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_SPEAKER_NOT_AMPLIFIED", Values.tele_nSpeaker);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_SPEAKER_AMPLIFIED", Values.tele_aSpeaker);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_AMP", Values.tele_amp);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_TRAP", Values.tele_trap);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("TELEOP_COOPERTITION_BONUS", Values.tele_bonus);} catch (JSONException e) {throw new RuntimeException(e);}
+
+        //endgame page
+        try {jsonObject.put("ENDGAME_END_POSITION", Values.eg_end_pos);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ENDGAME_CLIMB_TYPE", Values.eg_climb_type);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ENDGAME_BUDDY_CLIMB", Values.eg_buddy_climb);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ENDGAME_SPOTLIGHT_LEFT", Values.eg_spot_left);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ENDGAME_SPOTLIGHT_CENTER", Values.eg_spot_center);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ENDGAME_SPOTLIGHT_RIGHT", Values.eg_spot_right);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ENDGAME_THROWS_MADE", Values.eg_made);} catch (JSONException e) {throw new RuntimeException(e);}
+        try {jsonObject.put("ENDGAME_THROWS_MISSED", Values.eg_missed);} catch (JSONException e) {throw new RuntimeException(e);}
+
 
         //notes page
         try {jsonObject.put("DEFENDED_THIS_ROBOT", Values.notes_defends);} catch (JSONException e) {throw new RuntimeException(e);}
@@ -53,17 +64,17 @@ public class SubmitJSON {
         try {jsonObject.put("ANY_PENALTIES", Values.notes_penalty);} catch (JSONException e) {throw new RuntimeException(e);}
         try {jsonObject.put("NOTES_BOX", Values.notes_type_box);} catch (JSONException e) {throw new RuntimeException(e);}
 
-        try {toJSON(jsonObject, path);} catch (IOException e) {e.printStackTrace();}
+        try {toJSON(jsonObject);} catch (IOException e) {e.printStackTrace();}
     }
 
-    public void toJSON(JSONObject content, File path) throws IOException {
+    public void toJSON(JSONObject content) throws IOException {
         // Class to put the data into a JSON object
         FileOutputStream writer = new FileOutputStream(new File(path, "CRESCENDO_SCOUTING_DATA_" + calendar.getTimeInMillis() + ".json"));
         writer.write(content.toString().getBytes());
         writer.close();
     }
 
-    public void showToast(Context mContext, File path){
+    public void showToast(Context mContext){
         Toast.makeText(mContext, path.toString(), Toast.LENGTH_SHORT).show();
     }
 

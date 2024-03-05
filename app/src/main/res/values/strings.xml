@@ -1,11 +1,11 @@
 <resources>
     <!--General-->
-    <string name="app_name">Game FRO Scouting</string>
+    <string name="app_name">FRO Scouting</string>
     <string name="content_desc">content desc</string>
     <string name="default_text">Empty\nBox</string>
     <string name="default_type">Type Here…</string>
     <string name="default_number">0</string>
-    
+
     <!--Start Page-->
     <string name="main_header">FRO Scouting</string>
     <string name="game_text">Game</string>
@@ -13,28 +13,36 @@
     <string name="team_num">Team\nNumber:</string>
     <string name="rob_pos">Robot\nPosition:</string>
     <string name="match_num">Match\nNumber:</string>
+    <string name="hum_pos">Human\nPlayer\nPosition:</string>
     <string name="start_scouting">Start Scouting</string>
 
     <!--Auto-->
     <string name="auto_header">Auto</string>
-    <string name="leave_comm">Leave\nCommunity</string>
-    <string name="auto_end_pos">Auto\nEnd Position</string>
-    <string name="cone_bot_row">Cone\nBottom Row</string>
-    <string name="cone_mid_row">Cone\nMiddle Row</string>
-    <string name="cone_top_row">Cone\n Top Row </string>
-    <string name="cube_bot_row">Cube\nBottom Row</string>
-    <string name="cube_mid_row">Cube\nMiddle Row</string>
-    <string name="cube_top_row">Cube\nTop Row</string>
+    <string name="auto_leave">Leave Robot\nStarting Zone</string>
+    <string name="auto_speaker">Speaker</string>
+    <string name="auto_amp">Amp</string>
+    <string name="auto_trap">Trap</string>
 
     <!--Tele Op-->
     <string name="teleop_header">Tele Op</string>
-    <string name="pickup_ground">Ground\nPickup</string>
-    <string name="pickup_single">Single\nPickup</string>
-    <string name="pickup_double">Double\nPickup</string>
+    <string name="tele_nSpeaker">Speaker\nNot Amplified</string>
+    <string name="tele_aSpeaker">Speaker\nAmplified</string>
+    <string name="tele_amp">Amp</string>
+    <string name="tele_trap">Trap</string>
+    <string name="tele_ground">Ground\nPickup</string>
+    <string name="tele_source">Source\nPickup</string>
+    <string name="tele_bonus">Coopertition\nBonus</string>
 
     <!--Endgame-->
     <string name="endgame_header">End Game</string>
-    <string name="end_end_pos">End Game\nEnd Position</string>
+    <string name="eg_pos">End\nPosition</string>
+    <string name="eg_climb">Climb\nType</string>
+    <string name="eg_buddy">Buddy\nClimb</string>
+    <string name="eg_os_left">Spotlight\nOnstage Left</string>
+    <string name="eg_os_center">Spotlight\nCenter Stage</string>
+    <string name="eg_os_right">Spotlight\nOnstage Right</string>
+    <string name="eg_throws_made">Throws\nMade</string>
+    <string name="eg_throws_miss">Throws\nMissed</string>
 
     <!--Notes-->
     <string name="notes_header">Notes</string>
@@ -48,19 +56,18 @@
     <!--Submit Screen-->
     <string name="home_text">Home Page</string>
     <string name="submit_text">Submit</string>
-    
+
     <!--Help Screen-->
     <string name="help_header_1">How To Scout</string>
     <string name="help_header_2">Important Reminders:</string>
+    <string name="click_to_close">Click Anywhere To Close</string>
 
 
     <!-- Long Strings -->
     <string name="help_screen_bottom">
-\t \u25CF Engaged = The robot is on the charge station and it’s balanced. (The lights are on) \n
-\t \u25CF Docked = The robot is on the charge station but it isn’t balanced. (The lights are NOT on) \n
-\t \u25CF Parked = The robot is not on the charged station, but it’s in the community zone. \n
-\t \u25CF Single Pickup = The human player station where a game piece is dropped down a ramp. \n
-\t \u25CF Double Pickup = The human player station where the robot can pick up a game piece off of a ledge.</string>
+\t \u25CF Coopertition Bonus = If both team’s amp human player hit the button in the first 40 seconds\n
+\t \u25CF Spotlight = Human player scored a note on a microphone corresponding to a chain with a robot on it\n
+\t \u25CF Onstage = The robot is fully not touching the ground. (Left/Right is by the driver’s pov)</string>
     <string name="help_screen_top">
 \t 1. Check the match number and the position assigned to you on the scouting schedule. \n
 \t 2. Enter your name, the robot number, and the robot position. \n
@@ -74,38 +81,68 @@
     <!-- Arrays -->
 
     <string-array name="positions">
+        <item>Dropdown</item>
         <item>Left</item>
         <item>Middle</item>
         <item>Right</item>
     </string-array>
 
     <string-array name="end_pos">
+        <item>Dropdown</item>
         <item>Parked</item>
-        <item>Docked</item>
-        <item>Engaged</item>
-        <item>None of The Above</item>
+        <item>Onstage Left</item>
+        <item>Center Stage</item>
+        <item>Onstage Right</item>
+    </string-array>
+
+    <string-array name="climb_type">
+        <item>Dropdown</item>
+        <item>Single</item>
+        <item>Double</item>
+        <item>Triple</item>
+    </string-array>
+
+    <string-array name="hum_pos">
+        <item>Dropdown</item>
+        <item>Source</item>
+        <item>Amp</item>
     </string-array>
 
     <string-array name="team_numbers">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>101</item>
-        <item>2304</item>
-        <item>334</item>
-        <item>4092</item>
+        <item>25</item>
+        <item>303</item>
+        <item>341</item>
+        <item>423</item>
+        <item>427</item>
+        <item>433</item>
+        <item>708</item>
+        <item>709</item>
+        <item>816</item>
+        <item>1089</item>
+        <item>1143</item>
+        <item>1168</item>
+        <item>1391</item>
+        <item>1403</item>
+        <item>2095</item>
+        <item>2234</item>
+        <item>2458</item>
+        <item>2539</item>
+        <item>2559</item>
+        <item>2590</item>
+        <item>2607</item>
+        <item>3637</item>
+        <item>4285</item>
+        <item>4637</item>
+        <item>5181</item>
         <item>5401</item>
-        <item>6999</item>
-        <item>78</item>
-        <item>826</item>
-        <item>9995</item>
+        <item>5407</item>
+        <item>5684</item>
+        <item>5895</item>
+        <item>6226</item>
+        <item>6808</item>
+        <item>7414</item>
+        <item>9027</item>
 
     </string-array>
-    
+
 </resources>

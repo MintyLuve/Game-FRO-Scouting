@@ -9,7 +9,6 @@
     android:background="@color/midBlue"
     android:weightSum="5">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -19,7 +18,7 @@
     <ImageView
         android:layout_width="267dp"
         android:layout_height="5dp"
-        android:background="@drawable/dotted_line_dark"
+        android:background="@drawable/dotted_line"
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/content_desc" />
 
@@ -31,66 +30,51 @@
         android:paddingRight="30dp"
         android:layout_marginTop="14dp"
         android:layout_weight="1"
-        android:weightSum="3">
+        android:weightSum="2">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/box_background"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="2">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="0dp"
                 style="@style/box_text"
-                android:text="@string/pickup_ground"/>
+                android:text="@string/tele_ground"
+                android:layout_weight="1"/>
             <com.google.android.material.materialswitch.MaterialSwitch
                 android:id="@+id/groundSwitch"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"/>
         </LinearLayout>
         <View
-            android:layout_width="7dp"
+            android:layout_width="30dp"
             android:layout_height="match_parent"/>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/box_background"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="2">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="0dp"
                 style="@style/box_text"
-                android:text="@string/pickup_single"/>
+                android:text="@string/tele_source"
+                android:layout_weight="1"/>
             <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/singleSwitch"
+                android:id="@+id/sourceSwitch"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"/>
         </LinearLayout>
-        <View
-            android:layout_width="7dp"
-            android:layout_height="match_parent"/>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/box_background"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                style="@style/box_text"
-                android:text="@string/pickup_double"/>
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/doubleSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
-        </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -99,8 +83,9 @@
         android:layout_marginTop="14dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:padding="5dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/long_box_white"
+        android:background="@drawable/long_box_white_background"
         android:layout_weight="1"
         android:weightSum="3">
         <LinearLayout
@@ -114,7 +99,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 style="@style/long_box_text"
-                android:text="@string/cone_bot_row"/>
+                android:text="@string/tele_nSpeaker"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -124,16 +109,16 @@
                 android:gravity="center">
                 <ImageButton
                     android:contentDescription="@string/content_desc"
-                    android:id="@+id/co_bo_minus"
+                    android:id="@+id/nSpeaker_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/minus_number_icon"
+                    android:src="@drawable/minus_number_button"
                     android:layout_marginStart="5dp"/>
                 <TextView
-                    android:id="@+id/co_bo_num"
+                    android:id="@+id/nSpeaker_num"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:text="@string/default_number"
@@ -141,13 +126,13 @@
                     android:layout_weight="1"/>
                 <ImageButton
                     android:contentDescription="@string/content_desc"
-                    android:id="@+id/co_bo_plus"
+                    android:id="@+id/nSpeaker_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/plus_number_button"
                     android:layout_marginEnd="5dp"/>
             </LinearLayout>
         </LinearLayout>
@@ -159,7 +144,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/mid_long_box_grey"
             android:orientation="vertical"
             android:weightSum="2">
             <TextView
@@ -167,7 +151,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 style="@style/long_box_text"
-                android:text="@string/cone_mid_row"/>
+                android:text="@string/tele_amp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -177,16 +161,16 @@
                 android:gravity="center">
                 <ImageButton
                     android:contentDescription="@string/content_desc"
-                    android:id="@+id/co_mi_minus"
+                    android:id="@+id/amp_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/minus_number_icon"
+                    android:src="@drawable/minus_number_button"
                     android:layout_marginStart="5dp"/>
                 <TextView
-                    android:id="@+id/co_mi_num"
+                    android:id="@+id/amp_num"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:text="@string/default_number"
@@ -194,13 +178,13 @@
                     android:layout_weight="1"/>
                 <ImageButton
                     android:contentDescription="@string/content_desc"
-                    android:id="@+id/co_mi_plus"
+                    android:id="@+id/amp_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/plus_number_button"
                     android:layout_marginEnd="5dp"/>
             </LinearLayout>
         </LinearLayout>
@@ -216,7 +200,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 style="@style/long_box_text"
-                android:text="@string/cone_top_row"/>
+                android:text="@string/tele_aSpeaker"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -226,16 +210,16 @@
                 android:gravity="center">
                 <ImageButton
                     android:contentDescription="@string/content_desc"
-                    android:id="@+id/co_to_minus"
+                    android:id="@+id/aSpeaker_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/minus_number_icon"
+                    android:src="@drawable/minus_number_button"
                     android:layout_marginStart="5dp"/>
                 <TextView
-                    android:id="@+id/co_to_num"
+                    android:id="@+id/aSpeaker_num"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:text="@string/default_number"
@@ -243,41 +227,42 @@
                     android:layout_weight="1"/>
                 <ImageButton
                     android:contentDescription="@string/content_desc"
-                    android:id="@+id/co_to_plus"
+                    android:id="@+id/aSpeaker_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/plus_number_button"
                     android:layout_marginEnd="5dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="122dp"
+        android:layout_height="124dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         android:layout_marginTop="14dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_marginBottom="60dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/long_box_grey"
         android:layout_weight="1"
-        android:weightSum="3">
+        android:weightSum="2">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/box_background"
             android:orientation="vertical"
             android:weightSum="2">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                style="@style/long_box_text"
-                android:text="@string/cube_bot_row"/>
+                style="@style/box_text"
+                android:text="@string/tele_trap"
+                android:layout_weight="1"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -287,16 +272,16 @@
                 android:gravity="center">
                 <ImageButton
                     android:contentDescription="@string/content_desc"
-                    android:id="@+id/cu_bo_minus"
+                    android:id="@+id/trap_minus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/minus_number_icon"
+                    android:src="@drawable/minus_number_button"
                     android:layout_marginStart="5dp"/>
                 <TextView
-                    android:id="@+id/cu_bo_num"
+                    android:id="@+id/trap_num"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:text="@string/default_number"
@@ -304,118 +289,38 @@
                     android:layout_weight="1"/>
                 <ImageButton
                     android:contentDescription="@string/content_desc"
-                    android:id="@+id/cu_bo_plus"
+                    android:id="@+id/trap_plus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/transparent"
                     android:layout_weight="1"
                     style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
+                    android:src="@drawable/plus_number_button"
                     android:layout_marginEnd="5dp"/>
             </LinearLayout>
         </LinearLayout>
-
         <View
-            android:layout_width="0dp"
+            android:layout_width="30dp"
             android:layout_height="match_parent"/>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/mid_long_box_white"
+            android:background="@drawable/box_background"
             android:orientation="vertical"
             android:weightSum="2">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                style="@style/long_box_text"
-                android:text="@string/cube_mid_row"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:weightSum="3"
-                android:gravity="center">
-                <ImageButton
-                    android:contentDescription="@string/content_desc"
-                    android:id="@+id/cu_mi_minus"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent"
-                    android:layout_weight="1"
-                    style="@style/increment_buttons"
-                    android:src="@drawable/minus_number_icon"
-                    android:layout_marginStart="5dp"/>
-                <TextView
-                    android:id="@+id/cu_mi_num"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="@string/default_number"
-                    style="@style/number_text"
-                    android:layout_weight="1"/>
-                <ImageButton
-                    android:contentDescription="@string/content_desc"
-                    android:id="@+id/cu_mi_plus"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent"
-                    android:layout_weight="1"
-                    style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
-                    android:layout_marginEnd="5dp"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:weightSum="2">
-            <TextView
-                android:layout_width="match_parent"
+                style="@style/box_text"
+                android:text="@string/tele_bonus"
+                android:layout_weight="1"/>
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/bonusSwitch"
+                android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                style="@style/long_box_text"
-                android:text="@string/cube_top_row"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:weightSum="3"
-                android:gravity="center">
-                <ImageButton
-                    android:contentDescription="@string/content_desc"
-                    android:id="@+id/cu_to_minus"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent"
-                    android:layout_weight="1"
-                    style="@style/increment_buttons"
-                    android:src="@drawable/minus_number_icon"
-                    android:layout_marginStart="5dp"/>
-                <TextView
-                    android:id="@+id/cu_to_num"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="@string/default_number"
-                    style="@style/number_text"
-                    android:layout_weight="1"/>
-                <ImageButton
-                    android:contentDescription="@string/content_desc"
-                    android:id="@+id/cu_to_plus"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/transparent"
-                    android:layout_weight="1"
-                    style="@style/increment_buttons"
-                    android:src="@drawable/plus_number_icon"
-                    android:layout_marginEnd="5dp"/>
-            </LinearLayout>
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

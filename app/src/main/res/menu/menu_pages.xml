@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/auto_button"
+        android:title=""
+        android:icon="@drawable/menu_auto_button"/>
+    <item
+        android:id="@+id/teleop_button"
+        android:title=""
+        android:icon="@drawable/menu_teleop_button"/>
+    <item
+        android:id="@+id/endgame_button"
+        android:title=""
+        android:icon="@drawable/menu_endgame_button"/>
+    <item
+        android:id="@+id/notes_button"
+        android:title=""
+        android:icon="@drawable/menu_notes_button"/>
+</menu>

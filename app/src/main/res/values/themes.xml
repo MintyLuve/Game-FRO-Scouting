@@ -21,7 +21,7 @@
         <item name="android:paddingTop">5dp</item>
         <item name="android:paddingRight">10dp</item>
         <item name="android:paddingLeft">10dp</item>
-        <item name="android:gravity">center_horizontal|top</item>
+        <item name="android:gravity">center</item>
         <item name="fontFamily">sans-serif</item>
         <item name="android:textColor">@color/textGrey</item>
         <item name="autoSizeTextType">uniform</item>
@@ -123,6 +123,12 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="misc_text" parent="Widget.AppCompat.TextView">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:textColor">@color/textGrey</item>
+        <item name="android:gravity">center</item>
     </style>
 
 </resources>
