@@ -1,11 +1,11 @@
 package com.fro.gamefroscouting;
 
-public class ClearValues {
+public class ResetValues {
     public void clearData(){
         Values.start_scout_name = null;
         Values.start_robot_pos = -1;
         Values.start_team_num = 0;
-        Values.start_match_num = 0;
+        Values.start_match_num += 1;
         Values.start_human_pos = -1;
         //auto
         Values.auto_leave_start = false;

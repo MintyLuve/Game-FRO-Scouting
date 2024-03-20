@@ -9,17 +9,11 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.ContactsContract;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
-
-import java.io.File;
 
 public class ScoutingActivity extends AppCompatActivity {
     //declaring
@@ -157,9 +151,9 @@ public class ScoutingActivity extends AppCompatActivity {
                                 submitJSON.submitData();
                                 submitJSON.showToast(ScoutingActivity.this);
 
-                                //Calls ClearValues class and clears all data
-                                ClearValues clearValues = new ClearValues();
-                                clearValues.clearData();
+                                //Calls ResetValues class and clears all data
+                                ResetValues resetValues = new ResetValues();
+                                resetValues.clearData();
 
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             }
