@@ -5,6 +5,7 @@
     <string name="default_text">Empty\nBox</string>
     <string name="default_type">Type Here…</string>
     <string name="default_number">0</string>
+    <string name="submit_data">Submit Data?</string>
 
     <!--Start Page-->
     <string name="main_header">FRO Scouting</string>
