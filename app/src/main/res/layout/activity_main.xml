@@ -208,7 +208,7 @@
             android:layout_height="match_parent"
             android:background="@color/transparent"
             android:layout_weight="1"
-            style="@style/increment_buttons"
+            style="@style/src_buttons"
             android:src="@drawable/menu_help_button"
             android:layout_marginStart="5dp"/>
     </LinearLayout>

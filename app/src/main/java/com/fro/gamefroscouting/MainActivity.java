@@ -15,6 +15,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -138,6 +139,39 @@ public class MainActivity extends AppCompatActivity {
                 snackbarLayout.setPadding(0, 0, 0, 0);
                 //sets the button to have an x
                 helpButton.setImageResource(R.drawable.menu_help_exit_button);
+
+                //init pages
+                LinearLayout page1 = mySnackBar.findViewById(R.id.page1);
+                LinearLayout page2 = mySnackBar.findViewById(R.id.page2);
+                TextView pageNum = mySnackBar.findViewById(R.id.pageNum);
+
+                //init arrows
+                ImageButton leftArrow = mySnackBar.findViewById(R.id.leftArrow);
+                ImageButton rightArrow = mySnackBar.findViewById(R.id.rightArrow);
+
+                //when right arrow is clicked it changes the page
+                rightArrow.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        page1.setVisibility(View.GONE);
+                        page2.setVisibility(View.VISIBLE);
+                        pageNum.setText("Pg. 2");
+                        rightArrow.setVisibility(View.INVISIBLE);
+                        leftArrow.setVisibility(View.VISIBLE);
+                    }
+                });
+
+                //when left arrow is clicked it changes the page
+                leftArrow.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        page1.setVisibility(View.VISIBLE);
+                        page2.setVisibility(View.GONE);
+                        pageNum.setText("Pg. 1");
+                        rightArrow.setVisibility(View.VISIBLE);
+                        leftArrow.setVisibility(View.INVISIBLE);
+                    }
+                });
 
                 //when behind is clicked it dismisses the snack bar
                 View behind = mySnackBar.findViewById(R.id.behind);
