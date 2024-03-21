@@ -11,6 +11,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -72,7 +74,7 @@ public class ScoutingActivity extends AppCompatActivity {
                 // makes a snack bar with no text (length is time)
                 final Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_INDEFINITE);
                 // set the background to my snack bar
-                View mySnackBar = getLayoutInflater().inflate(R.layout.help_snackbar_scouting, null);
+                View mySnackBar = getLayoutInflater().inflate(R.layout.help_snackbar_main, null);
                 //makes background transparent so the custom view can be seen
                 snackbar.getView().setBackgroundColor(Color.TRANSPARENT);
                 //changes snack bar layout
@@ -81,23 +83,51 @@ public class ScoutingActivity extends AppCompatActivity {
                 //sets the button to have an x
                 helpButton.setImageResource(R.drawable.menu_help_exit_button);
 
+                //init pages
+                LinearLayout page1 = mySnackBar.findViewById(R.id.page1);
+                LinearLayout page2 = mySnackBar.findViewById(R.id.page2);
+                TextView pageNum = mySnackBar.findViewById(R.id.pageNum);
+
+                //init arrows
+                ImageButton leftArrow = mySnackBar.findViewById(R.id.leftArrow);
+                ImageButton rightArrow = mySnackBar.findViewById(R.id.rightArrow);
+
+                //when right arrow is clicked it changes the page
+                rightArrow.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        page1.setVisibility(View.GONE);
+                        page2.setVisibility(View.VISIBLE);
+                        pageNum.setText("Pg. 2");
+                        rightArrow.setVisibility(View.INVISIBLE);
+                        leftArrow.setVisibility(View.VISIBLE);
+                    }
+                });
+
+                //when left arrow is clicked it changes the page
+                leftArrow.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        page1.setVisibility(View.VISIBLE);
+                        page2.setVisibility(View.GONE);
+                        pageNum.setText("Pg. 1");
+                        rightArrow.setVisibility(View.VISIBLE);
+                        leftArrow.setVisibility(View.INVISIBLE);
+                    }
+                });
+
                 //when behind is clicked it dismisses the snack bar
                 View behind = mySnackBar.findViewById(R.id.behind);
                 behind.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
-                        snackbar.dismiss();
-                    }
+                    public void onClick(View v) {snackbar.dismiss();}
                 });
                 // add the custom snack bar layout to snack bar layout
                 snackbarLayout.addView(mySnackBar, 0);
                 snackbar.show();
 
-                snackbar.addCallback(new Snackbar.Callback(){
-                    @Override
-                    public void onDismissed(Snackbar snackbar, int event) {
-                        helpButton.setImageResource(R.drawable.menu_help_button);
-                    }});
+                snackbar.addCallback(new Snackbar.Callback(){ @Override
+                public void onDismissed(Snackbar snackbar, int event) {helpButton.setImageResource(R.drawable.menu_help_button);}});
             }
         });
 
