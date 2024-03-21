@@ -175,10 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //when behind is clicked it dismisses the snack bar
                 View behind = mySnackBar.findViewById(R.id.behind);
-                behind.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {snackbar.dismiss();}
-                });
+                behind.setOnClickListener(v1 -> snackbar.dismiss());
                 // add the custom snack bar layout to snack bar layout
                 snackbarLayout.addView(mySnackBar, 0);
                 snackbar.show();

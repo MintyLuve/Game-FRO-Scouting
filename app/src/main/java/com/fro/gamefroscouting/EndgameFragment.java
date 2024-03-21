@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,8 @@ public class EndgameFragment extends Fragment {
     //spinners
     Spinner posSpinner;
     Spinner climbSpinner;
+    //throws box
+    LinearLayout throwsBox;
     // misc
     int maxThrows = 3;
     String empty = "";
@@ -59,6 +62,8 @@ public class EndgameFragment extends Fragment {
         //spinners
         posSpinner = rootView.findViewById(R.id.posSpinner);
         climbSpinner = rootView.findViewById(R.id.climbSpinner);
+        //throws box
+        throwsBox = rootView.findViewById(R.id.throwsBox);
 
         // adds options to the position spinner
         ArrayAdapter<CharSequence> posAdapter = ArrayAdapter.createFromResource
@@ -128,6 +133,14 @@ public class EndgameFragment extends Fragment {
         // throws missed
         plusOne(missedPlus, missedNum,2);
         minusOne(missedMinus, missedNum,2);
+
+        // if the human player is not amp, it hides throw options
+        if (Values.start_human_pos != 2){
+            throwsBox.setVisibility(View.INVISIBLE);
+        }
+        else {
+            throwsBox.setVisibility(View.VISIBLE);
+        }
 
         // Inflate the layout for this fragment
         return rootView;
