@@ -6,7 +6,6 @@
     <string name="default_type">Type Here…</string>
     <string name="default_number">0</string>
     <string name="submit_data">Submit Data?</string>
-    <string name="default_page">Pg. 1</string>
 
     <!--Start Page-->
     <string name="main_header">FRO Scouting</string>
@@ -60,18 +59,18 @@
     <string name="submit_text">Submit</string>
 
     <!--Help Screen-->
-    <string name="help_header_1">How To Scout</string>
-    <string name="help_header_2">Important Reminders:</string>
+    <string name="help_header_scout">How To Scout</string>
+    <string name="help_header_tidbit">Helpful Tidbits</string>
+    <string name="help_header_visual">Visual Cues</string>
+    <string name="help_header_penalties">Frequent Penalties</string>
+    <string name="help_header_terms">Terminology</string>
+
     <string name="click_to_close">Click Anywhere To Close</string>
+    <string name="default_page">Pg. 1</string>
 
 
     <!-- Long Strings -->
-    <string name="help_screen_bottom">
-\t \u25CF Coopertition Bonus = If both team’s amp human player hit the button in the first 40 seconds. A handshake icon will appear on the scoreboard\n
-\t \u25CF Spotlight = Human player scored a note on a microphone\n
-\t \u25CF Onstage = The robot is not touching the ground. (Left/Right is by the driver’s pov)\n
-\t \u25CF You can find the human player position by looking at the amp player’s, and inferring their team</string>
-    <string name="help_screen_top">
+    <string name="help_screen_scout">
 \t 1. Check the match number and the position assigned to you on the scouting schedule. \n
 \t 2. Enter your name, the robot number, and the robot position. \n
 \t 3. Start in the Auto section. \n
@@ -80,6 +79,31 @@
 \t 6. Repeat step 4 \n
 \t 7. When the game is over, go to the Endgame section and fill out the boxes. \n
 \t 8. Go to the Notes section, and input any notes.</string>
+
+    <string name="help_screen_tidbits">
+\t \u25CF Stage Left/Right is determined by the driver’s POV\n
+\t \u25CF You can find the human player position by looking at the amp player’s shirt color, and inferring their team.\n
+\t \u25CF The point of the defends/ defended buttons are to see if the robot\'s performance impaired by defense.\n
+\t \u25CF Examples of things to put in the notes box: If the robot is a skateboard, a defense bot, or their auto fails.\n
+\t \u25CF Climb Type is how many robots are on the chain the scouted robot is on.</string>
+
+    <string name="help_screen_visual">
+\t \u25CF If the speaker is amplified, a 10 second countdown will appear on the scoreboard.\n
+\t \u25CF If coopertition is enabled, a handshake icon will be on the scoreboard.</string>
+
+    <string name="help_screen_penalties">
+\t \u25CF If a robot does a penalty, the ref closest to them will wave a flag the robot\'s team color.\n
+\t \u25CF A robot can be in control of only ONE NOTE at a time.\n
+\t \u25CF If a robot is touching the post of the stage closest to their own speaker, and an enemy robot touches them, that is a penalty on the enemy.\n
+\t \u25CF If a robot is in their amp or source zone, and an enemy robot touches them, that is a penalty on the enemy. \n
+\t \u25CF If a robot purposefully ejects a note outside of the field. \n
+\t \u25CF If a high note leaves the field.</string>
+    
+    <string name="help_screen_terms">
+\t \u25CF Spotlight = Human player scored a note on a microphone. \n
+\t \u25CF Microphone = The posts on top of the stage. \n
+\t \u25CF Onstage = The robot has climbed and is not touching the ground. \n
+\t \u25CF Coopertition Bonus = If both teams amp human players hit their yellow buttons in the first 45 seconds.</string>
 
     <!-- Arrays -->
 

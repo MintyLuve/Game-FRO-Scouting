@@ -12,13 +12,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -131,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 // makes a snack bar with no text (length is time)
                 final Snackbar snackbar = Snackbar.make(v, "", Snackbar.LENGTH_INDEFINITE);
                 // set the background to my snack bar
-                View mySnackBar = getLayoutInflater().inflate(R.layout.help_snackbar_main, null);
+                View mySnackBar = getLayoutInflater().inflate(R.layout.help_snackbar, null);
                 //makes background transparent so the custom view can be seen
                 snackbar.getView().setBackgroundColor(Color.TRANSPARENT);
                 //changes snack bar layout
@@ -143,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
                 //init pages
                 LinearLayout page1 = mySnackBar.findViewById(R.id.page1);
                 LinearLayout page2 = mySnackBar.findViewById(R.id.page2);
-                LinearLayout page3 = mySnackBar.findViewById(R.id.page3);
                 TextView pageNum = mySnackBar.findViewById(R.id.pageNum);
 
                 //init arrows
@@ -154,22 +151,11 @@ public class MainActivity extends AppCompatActivity {
                 rightArrow.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (pageNum.getText().toString().equals("Pg. 1")){
-                            page1.setVisibility(View.GONE);
-                            page2.setVisibility(View.VISIBLE);
-                            page3.setVisibility(View.GONE);
-                            pageNum.setText("Pg. 2");
-                            rightArrow.setVisibility(View.VISIBLE);
-                            leftArrow.setVisibility(View.VISIBLE);
-                        }
-                        else if (pageNum.getText().toString().equals("Pg. 2")){
-                            page1.setVisibility(View.GONE);
-                            page2.setVisibility(View.GONE);
-                            page3.setVisibility(View.VISIBLE);
-                            pageNum.setText("Pg. 3");
-                            rightArrow.setVisibility(View.INVISIBLE);
-                            leftArrow.setVisibility(View.VISIBLE);
-                        }
+                        page1.setVisibility(View.GONE);
+                        page2.setVisibility(View.VISIBLE);
+                        pageNum.setText("Pg. 2");
+                        rightArrow.setVisibility(View.INVISIBLE);
+                        leftArrow.setVisibility(View.VISIBLE);
                     }
                 });
 
@@ -177,23 +163,11 @@ public class MainActivity extends AppCompatActivity {
                 leftArrow.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
-                        if (pageNum.getText().toString().equals("Pg. 2")){
-                            page1.setVisibility(View.VISIBLE);
-                            page2.setVisibility(View.GONE);
-                            page3.setVisibility(View.GONE);
-                            pageNum.setText("Pg. 1");
-                            rightArrow.setVisibility(View.VISIBLE);
-                            leftArrow.setVisibility(View.INVISIBLE);
-                        }
-                        else if (pageNum.getText().toString().equals("Pg. 3")){
-                            page1.setVisibility(View.GONE);
-                            page2.setVisibility(View.VISIBLE);
-                            page3.setVisibility(View.GONE);
-                            pageNum.setText("Pg. 2");
-                            rightArrow.setVisibility(View.INVISIBLE);
-                            leftArrow.setVisibility(View.VISIBLE);
-                        }
+                        page1.setVisibility(View.VISIBLE);
+                        page2.setVisibility(View.GONE);
+                        pageNum.setText("Pg. 1");
+                        rightArrow.setVisibility(View.VISIBLE);
+                        leftArrow.setVisibility(View.INVISIBLE);
                     }
                 });
 
