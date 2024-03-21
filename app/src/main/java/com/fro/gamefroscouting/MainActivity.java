@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 //init pages
                 LinearLayout page1 = mySnackBar.findViewById(R.id.page1);
                 LinearLayout page2 = mySnackBar.findViewById(R.id.page2);
+                LinearLayout page3 = mySnackBar.findViewById(R.id.page3);
                 TextView pageNum = mySnackBar.findViewById(R.id.pageNum);
 
                 //init arrows
@@ -153,11 +154,22 @@ public class MainActivity extends AppCompatActivity {
                 rightArrow.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        page1.setVisibility(View.GONE);
-                        page2.setVisibility(View.VISIBLE);
-                        pageNum.setText("Pg. 2");
-                        rightArrow.setVisibility(View.INVISIBLE);
-                        leftArrow.setVisibility(View.VISIBLE);
+                        if (pageNum.getText().toString().equals("Pg. 1")){
+                            page1.setVisibility(View.GONE);
+                            page2.setVisibility(View.VISIBLE);
+                            page3.setVisibility(View.GONE);
+                            pageNum.setText("Pg. 2");
+                            rightArrow.setVisibility(View.VISIBLE);
+                            leftArrow.setVisibility(View.VISIBLE);
+                        }
+                        else if (pageNum.getText().toString().equals("Pg. 2")){
+                            page1.setVisibility(View.GONE);
+                            page2.setVisibility(View.GONE);
+                            page3.setVisibility(View.VISIBLE);
+                            pageNum.setText("Pg. 3");
+                            rightArrow.setVisibility(View.INVISIBLE);
+                            leftArrow.setVisibility(View.VISIBLE);
+                        }
                     }
                 });
 
@@ -165,11 +177,23 @@ public class MainActivity extends AppCompatActivity {
                 leftArrow.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        page1.setVisibility(View.VISIBLE);
-                        page2.setVisibility(View.GONE);
-                        pageNum.setText("Pg. 1");
-                        rightArrow.setVisibility(View.VISIBLE);
-                        leftArrow.setVisibility(View.INVISIBLE);
+
+                        if (pageNum.getText().toString().equals("Pg. 2")){
+                            page1.setVisibility(View.VISIBLE);
+                            page2.setVisibility(View.GONE);
+                            page3.setVisibility(View.GONE);
+                            pageNum.setText("Pg. 1");
+                            rightArrow.setVisibility(View.VISIBLE);
+                            leftArrow.setVisibility(View.INVISIBLE);
+                        }
+                        else if (pageNum.getText().toString().equals("Pg. 3")){
+                            page1.setVisibility(View.GONE);
+                            page2.setVisibility(View.VISIBLE);
+                            page3.setVisibility(View.GONE);
+                            pageNum.setText("Pg. 2");
+                            rightArrow.setVisibility(View.INVISIBLE);
+                            leftArrow.setVisibility(View.VISIBLE);
+                        }
                     }
                 });
 
