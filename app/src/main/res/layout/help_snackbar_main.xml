@@ -131,7 +131,7 @@
                 android:id="@+id/pageNum"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Pg. 1"
+                android:text="@string/default_page"
                 style="@style/header_text_dark"
                 android:layout_weight="1"
                 android:padding="2dp"
