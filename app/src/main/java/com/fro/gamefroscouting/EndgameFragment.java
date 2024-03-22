@@ -38,6 +38,7 @@ public class EndgameFragment extends Fragment {
     Spinner climbSpinner;
     //throws box
     LinearLayout throwsBox;
+    LinearLayout throwsText;
     // misc
     int maxThrows = 3;
     String empty = "";
@@ -64,6 +65,7 @@ public class EndgameFragment extends Fragment {
         climbSpinner = rootView.findViewById(R.id.climbSpinner);
         //throws box
         throwsBox = rootView.findViewById(R.id.throwsBox);
+        throwsText = rootView.findViewById(R.id.throwsText);
 
         // adds options to the position spinner
         ArrayAdapter<CharSequence> posAdapter = ArrayAdapter.createFromResource
@@ -136,10 +138,12 @@ public class EndgameFragment extends Fragment {
 
         // if the human player is not amp, it hides throw options
         if (Values.start_human_pos != 2){
-            throwsBox.setVisibility(View.INVISIBLE);
+            throwsBox.setVisibility(View.GONE);
+            throwsText.setVisibility(View.VISIBLE);
         }
         else {
             throwsBox.setVisibility(View.VISIBLE);
+            throwsText.setVisibility(View.GONE);
         }
 
         // Inflate the layout for this fragment

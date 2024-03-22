@@ -181,6 +181,7 @@
 
     <LinearLayout
         android:id="@+id/throwsBox"
+        android:visibility="gone"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="124dp"
@@ -240,6 +241,7 @@
                     android:layout_marginEnd="5dp"/>
             </LinearLayout>
         </LinearLayout>
+
         <View
             android:layout_width="30dp"
             android:layout_height="match_parent"/>
@@ -293,4 +295,25 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/throwsText"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="60dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="(The selected human player is NOT amp)"
+            style="@style/header_text_light"
+            android:paddingBottom="30dp"/>
+        </LinearLayout>
 </LinearLayout>
